@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Кирилл Иванов](https://up.htmlacademy.ru/adaptive/21/user/1194425).
-* Наставник: `Неизвестно`.
+* Наставник: [Натали Белоева](https://up.htmlacademy.ru/adaptive/21/user/1123699).
 
 ---
 
