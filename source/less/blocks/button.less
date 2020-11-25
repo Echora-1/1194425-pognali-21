@@ -1,0 +1,29 @@
+.button {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: rgb(@basic_blue_light);
+  background-color: rgb(@basic_yellow);
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgb(@special_yellow_dark);
+  }
+
+  &:active {
+    color: rgba(@basic_blue_light, 0.3);
+  }
+
+  &--address {
+    border: rgb(@blue_background) solid 3px;
+
+    &:hover {
+      color: rgb(@white);
+      background-color: rgb(@blue_background);
+    }
+
+    &:active {
+      color: rgba(@white, 0.3);
+    }
+  }
+}
