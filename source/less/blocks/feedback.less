@@ -21,9 +21,15 @@
 }
 
 .feedback__input {
+  font-family: inherit;
   border: rgb(@white) solid 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
 
   &::-webkit-input-placeholder {
+    font-family: inherit;
     color: rgba(@special_grey, 0.3);
     font-weight: 700;
     font-size: 18px;
@@ -51,5 +57,26 @@
 
   &:invalid {
     color: rgb(@red);
+  }
+}
+
+
+.feedback__button {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  background-color: rgb(@basic_yellow);
+  border: none;
+  outline: none;
+  color: rgb(@basic_blue_light);
+
+  &:hover {
+    background-color: rgb(@special_yellow_dark);
+  }
+
+  &:active {
+    color: rgba(@basic_blue_light, 0.3);
   }
 }
