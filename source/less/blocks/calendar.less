@@ -1,0 +1,56 @@
+.calendar__last-month,
+.calendar__next-month {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.calendar__selection-month {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: rgb(@basic_blue_light);
+}
+
+.calendar__wrapper {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.calendar__name {
+  font-weight: 400;
+  color: rgb(@special_grey);
+
+  &--weekend {
+    color: rgb(@red_weekend);
+  }
+}
+
+.calendar__day {
+  color: rgb(@basic_blue_light);
+  background-color: rgb(@light_gray);
+  border: 2px solid rgb(@light_gray);
+
+  &--disabled {
+    color: rgba(@special_grey, 0.3);
+    background-color: rgb(@white);
+    border: 2px solid rgb(@white);
+  }
+
+  &--chosen {
+    color: rgb(@white);
+    background-color: rgb(@basic_blue_light);
+    border: 2px solid rgb(@basic_blue_light);
+  }
+
+  &:hover {
+    border: 2px solid rgb(@red_weekend);
+  }
+}

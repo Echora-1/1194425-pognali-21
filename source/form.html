@@ -60,9 +60,10 @@
             <div class="profile">
                 <div class="container">
                     <h2 class="visually-hidden">Мой профиль</h2>
-                    <div class="level level--form"><span class="uppercase-form">80</span>level</div>
+                    <div class="level level--form"><span class="uppercase uppercase--form">80</span>level</div>
                     <img class="profile__image" src="https://via.placeholder.com/100x100" width="100" height="100" alt="Ваше изображение">
-                    <input class="profile__change-image" type="file">
+                    <input class="profile__change-input" type="file" id="change-photo">
+                    <label class="profile__change-label" for="change-photo">сменить фото</label>
                     <div class="profile__hobbies hobbies">
                         <label class="hobbies__title" for="hobbies">тэги</label>
                         <textarea class="hobbies__text" id="hobbies" name="hobby" rows="3">#бургер #бар #футбол #концерт #крафт</textarea>
@@ -72,22 +73,22 @@
                         <div class="transport__item">
                             <input class="transport__marker transport__marker--aircraft" id="aircraft" name="aircraft" type="checkbox">
                             <label class="transport__name visually-hidden" for="aircraft">Авиаперелет</label>
-                            <span class="transport__tooltip" aria-hidden="true">Авиаперелет</span>
+                            <span class="tooltip" aria-hidden="true">Авиаперелет</span>
                         </div>
                         <div class="transport__item">
                             <input class="transport__marker transport__marker--car" id="car" name="car" type="checkbox">
                             <label class="transport__name visually-hidden" for="car">Автотранспорт</label>
-                            <span class="transport__tooltip" aria-hidden="true">Автотранспорт</span>
+                            <span class="tooltip" aria-hidden="true">Автотранспорт</span>
                         </div>
                         <div class="transport__item">
                             <input class="transport__marker transport__marker--bike" id="bike" name="bike" type="checkbox">
                             <label class="transport__name visually-hidden" for="bike">Велосипед</label>
-                            <span class="transport__tooltip" aria-hidden="true">Велосипед</span>
+                            <span class="tooltip" aria-hidden="true">Велосипед</span>
                         </div>
                         <div class="transport__item">
                             <input class="transport__marker transport__marker--walkway" id="walkway" name="walkway" type="checkbox">
                             <label class="transport__name visually-hidden" for="walkway">Пешком</label>
-                            <span class="transport__tooltip" aria-hidden="true">Пешком</span>
+                            <span class="tooltip" aria-hidden="true">Пешком</span>
                         </div>
                     </div>
                 </div>
@@ -121,13 +122,13 @@
                         <h3 class="step__title">Шаг 1. Даты пребывания</h3>
                         <p class="step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
                         <div class="step__travelers">
-                            <label class="step__quantity-travelers" for="quantity-travelers">ищу попутчиков: <span class="abbreviation">чел.</span></label>
+                            <label class="step__label-quantity" for="quantity-travelers">ищу попутчиков: <span class="step__abbreviation">чел.</span></label>
                             <button class="step__minus step__minus--travelers" type="button" aria-label="убрать попутчика"></button>
                             <input class="step__quantity-input step__quantity-input--travelers" id="quantity-travelers" type="text" value="2" name="quantity-travelers">
                             <button class="step__plus step__plus--travelers" type="button" aria-label="добавить попутчика"></button>
                         </div>
                         <div class="step__days">
-                            <label class="step__quantity-days" for="quantity-days">длительность: <span class="abbreviation">дн.</span></label>
+                            <label class="step__label-quantity" for="quantity-days">длительность: <span class="step__abbreviation">дн.</span></label>
                             <button class="step__minus step__minus--days" type="button" aria-label="уменьшить длительность"></button>
                             <input class="step__quantity-input step__quantity-input--days" id="quantity-days" type="text" value="3" name="quantity-days">
                             <button class="step__plus step__plus--days" type="button" aria-label="увеличить длительность"></button>
@@ -268,17 +269,17 @@
                                     </tr>
                                 </table>
                                 <div class="route__country country">
-                                    <p class="country__item">Австралия</p>
-                                    <p class="country__item">Австрия</p>
-                                    <p class="country__item">Азербайджан</p>
-                                    <p class="country__item">Албания</p>
-                                    <p class="country__item">Алжир</p>
-                                    <p class="country__item">Ангола</p>
-                                    <p class="country__item">Андорра</p>
-                                    <p class="country__item">Антигуа и Барбуда</p>
-                                    <p class="country__item">Аргентина</p>
-                                    <p class="country__item">Армения</p>
-                                    <p class="country__item">Афганистан</p>
+                                    <a class="country__item" href="">Австралия</a>
+                                    <a class="country__item" href="">Австрия</a>
+                                    <a class="country__item" href="">Азербайджан</a>
+                                    <a class="country__item" href="">Албания</a>
+                                    <a class="country__item" href="">Алжир</a>
+                                    <a class="country__item" href="">Ангола</a>
+                                    <a class="country__item" href="">Андорра</a>
+                                    <a class="country__item" href="">Антигуа и Барбуда</a>
+                                    <a class="country__item" href="">Аргентина</a>
+                                    <a class="country__item" href="">Армения</a>
+                                    <a class="country__item" href="">Афганистан</a>
                                 </div>
                             </div>
                         </div>
@@ -290,17 +291,17 @@
                         <p class="step__description">Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.</p>
                         <div class="step__plan plan">
                             <div class="plan__item">
-                                <label class="plan-title" for="plan-description-1">Босния и Герцеговина</label>
+                                <label class="plan__title" for="plan-description-1">Босния и Герцеговина</label>
                                 <img class="plan__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг">
-                                <textarea class="plan__description" id="plan-description-1" name="plan" rows="3" placeholder="План действий"></textarea>
+                                <textarea class="plan__description" id="plan-description-1" name="plan" rows="7" placeholder="План действий"></textarea>
                             </div>
                             <div class="plan__item">
-                                <label class="plan-title" for="plan-description-2">Чехия</label>
+                                <label class="plan__title" for="plan-description-2">Чехия</label>
                                 <img class="plan__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг">
-                                <textarea class="plan__description" id="plan-description-2" name="plan" rows="3" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                                <textarea class="plan__description" id="plan-description-2" name="plan" rows="7" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                             </div>
                         </div>
-                        <button class="form-button" type="submit">Отправить</button>
+                        <button class="form-button form-button--next" type="submit">Отправить</button>
                         <a class="form-button form-button--last" href="#step-2">На шаг назад</a>
                     </div>
                 </div>
@@ -309,27 +310,27 @@
     </main>
 
     <footer class="page-footer">
-        <div class="container">
-            <a href="" class="logo">
-                <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип «Погнали»">
-            </a>
-            <ul class="social social--footer">
-                <li class="social__item">
-                    <a class="social__link social__link--footer social__link--facebook" href=""><span class="visually-hidden">Мы в Фейсбуке</span></a>
-                </li>
-                <li class="social__item">
-                    <a class="social__link social__link--footer social__link--vkontakte" href=""><span class="visually-hidden">Мы в Вконтакте</span></a>
-                </li>
-                <li class="social__item">
-                    <a class="social__link social__link--footer social__link--instagram" href=""><span class="visually-hidden">Мы в Инстаграме</span></a>
-                </li>
-            </ul>
-            <div class="page-footer__copyright copyright">
-                <p class="copyright__text">Разработано</p>
-                <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img class="copyright__image" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип «HTML Academy»"></a>
-            </div>
-        </div>
-    </footer>
+      <div class="container">
+          <a href="" class="logo">
+              <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип «Погнали»">
+          </a>
+          <ul class="social social--footer">
+              <li class="social__item">
+                  <a class="social__link social__link--footer social__link--facebook" href=""><span class="visually-hidden">Мы в Фейсбуке</span></a>
+              </li>
+              <li class="social__item">
+                  <a class="social__link social__link--footer social__link--vkontakte" href=""><span class="visually-hidden">Мы в Вконтакте</span></a>
+              </li>
+              <li class="social__item">
+                  <a class="social__link social__link--footer social__link--instagram" href=""><span class="visually-hidden">Мы в Инстаграме</span></a>
+              </li>
+          </ul>
+          <div class="page-footer__copyright copyright">
+              <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+                  <p class="copyright__text">Разработано</p><img class="copyright__image" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип «HTML Academy»"></a>
+          </div>
+      </div>
+  </footer>
 </body>
 
 

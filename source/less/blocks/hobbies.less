@@ -1,0 +1,30 @@
+.hobbies__title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: rgb(@basic_blue_light);
+}
+
+.hobbies__text {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  resize: none;
+  background-color: transparent;
+  border: 1px solid rgb(@hobbies_border_grey);
+  border-radius: 10px;
+  color: rgba(@special_grey, 0.6);
+
+  &:hover {
+    border: 1px solid rgb(@hobbies_border_hover);
+  }
+
+  &:focus {
+    border: 1px solid rgb(@basic_blue);
+    outline: none;
+    color: rgb(@special_grey);
+  }
+}
