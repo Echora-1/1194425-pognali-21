@@ -1,0 +1,32 @@
+.profile {
+  background-color: rgb(@light_gray);
+  padding-top: 22px;
+  padding-bottom: 34px;
+}
+
+.profile__change-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.profile__change-label {
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: rgb(@basic_blue);
+  background-color: rgb(@special_blue_light);
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(@special_blue_hover);
+  }
+
+  &:active {
+    background-color: rgb(@special_blue_light);
+    color: rgba(@basic_blue, 0.3);
+  }
+}
