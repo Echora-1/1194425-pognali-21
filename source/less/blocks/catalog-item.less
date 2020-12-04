@@ -1,0 +1,54 @@
+.catalog-item {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 0 18px;
+  background-color: rgb(@white);
+  padding-bottom: 23px;
+
+  &:hover {
+    box-shadow: 0 4px 9px rgba(@black, 0.16);
+  }
+}
+
+.catalog-item__link {
+  text-decoration: none;
+}
+
+.catalog-item__title {
+  font-size: 20px;
+  line-height: 20px;
+  color: rgb(@basic_blue_light);
+
+  &:hover {
+    color: rgba(@basic_blue_light, 0.6);
+  }
+
+  &:active {
+    color: rgba(@basic_blue_light, 0.3);
+  }
+}
+
+.catalog-item__hobby {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.catalog-item__button {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background-color: rgb(@basic_yellow);
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: rgb(@basic_blue);
+
+  &:hover {
+    background-color: rgb(@special_yellow_dark);
+  }
+
+  &:active {
+    color: rgba(@basic_blue, 0.3);
+  }
+}
