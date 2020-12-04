@@ -122,7 +122,8 @@
             </div>
         </div>
 
-        <form class="filter-travelers container" method="get" action="https://echo.htmlacademy.ru">
+        <form class="filter-travelers" method="get" action="https://echo.htmlacademy.ru">
+          <div class="container container--filter-travelers">
             <h2 class="filter-travelers__title">Подберите идеального попутчика</h2>
             <div class="filter-travelers__interests interests">
                 <button class="interests__title" type="button">хобби</button>
@@ -162,35 +163,36 @@
                 <div class="interests__item">
                     <input class="interests__marker interests__marker--aircraft" id="aircraft" name="aircraft" type="checkbox">
                     <label class="interests__name visually-hidden" for="aircraft">Авиаперелет</label>
-                    <span class="interests__tooltip" aria-hidden="true">Авиаперелет</span>
+                    <span class="tooltip" aria-hidden="true">Авиаперелет</span>
                     <input class="interests__marker interests__marker--car" id="car" name="car" type="checkbox">
                     <label class="interests__name visually-hidden" for="car">Автотранспорт</label>
-                    <span class="interests__tooltip" aria-hidden="true">Автотранспорт</span>
+                    <span class="tooltip" aria-hidden="true">Автотранспорт</span>
                     <input class="interests__marker interests__marker--bike" id="bike" name="bike" type="checkbox">
                     <label class="interests__name visually-hidden" for="bike">Велосипед</label>
-                    <span class="interests__tooltip" aria-hidden="true">Велосипед</span>
+                    <span class="tooltip" aria-hidden="true">Велосипед</span>
                     <input class="interests__marker interests__marker--walkway" id="walkway" name="walkway" type="checkbox">
                     <label class="interests__name visually-hidden" for="walkway">Пешком</label>
-                    <span class="interests__tooltip" aria-hidden="true">Пешком</span>
+                    <span class="tooltip" aria-hidden="true">Пешком</span>
                 </div>
             </div>
             <div class="filter-travelers__interests interests">
                 <button class="interests__title" type="button">Левел</button>
-                <div class="interests__level-filter level">
-                    <div class="level__controls">
-                        <input class="level__input level__input--min" type="number" name="min-level" value="30">
-                        <input class="level__input level__input--max" type="number" name="max-level" value="100">
+                <div class="interests__level-filter level-filter">
+                    <div class="level-filter__controls">
+                        <input class="level-filter__input level-filter__input--min" type="number" name="min-level" value="30">
+                        <input class="level-filter__input level-filter__input--max" type="number" name="max-level" value="100">
                     </div>
-                    <div class="level__range-controls">
-                        <div class="level__scale">
-                            <div class="level__bar"></div>
+                    <div class="level-filter__range-controls">
+                        <div class="level-filter__scale">
+                            <div class="level-filter__bar"></div>
                         </div>
-                        <div class="level__toggle level__toggle--min" tabindex="0" aria-label="Выбрать минимальный левел"></div>
-                        <div class="level__toggle level__toggle--max" tabindex="0" aria-label="Выбрать максимальный левел"></div>
+                        <div class="level-filter__toggle level-filter__toggle--min" tabindex="0" aria-label="Выбрать минимальный левел"></div>
+                        <div class="level-filter__toggle level-filter__toggle--max" tabindex="0" aria-label="Выбрать максимальный левел"></div>
                     </div>
                 </div>
             </div>
             <button class="filter-travelers__button" type="submit">показать</button>
+          </div>
         </form>
         <section class="catalog container">
             <h2 class="visually-hidden">Список попутчиков</h2>
@@ -220,14 +222,14 @@
                 </div>
                 <div class="traffic traffic--catalog-item">
                     <p class="catalog-title catalog-title--traffic">транспорт:</p>
-                    <div class="traffic__item traffic__item--aircraft traffic__item--active" aria-label="Путешествует с помощью авиаперелетов"><span class="traffic__tooltip">Авиаперелет</span></div>
-                    <div class="traffic__item traffic__item--car" aria-label="Путешествует с помощью автотранспорта"><span class="traffic__tooltip">Автотранспорт</span></div>
-                    <div class="traffic__item traffic__item--bike" aria-label="Путешествует с помощью велосипеда"><span class="traffic__tooltip">Велосипед</span></div>
-                    <div class="traffic__item traffic__item--walkway" aria-label="Путешествует пешком"><span class="traffic__tooltip">Пешком</span></div>
+                    <div class="traffic__item traffic__item--aircraft traffic__item--active" aria-label="Путешествует с помощью авиаперелетов"><span class="tooltip">Авиаперелет</span></div>
+                    <div class="traffic__item traffic__item--car" aria-label="Путешествует с помощью автотранспорта"><span class="tooltip">Автотранспорт</span></div>
+                    <div class="traffic__item traffic__item--bike" aria-label="Путешествует с помощью велосипеда"><span class="tooltip">Велосипед</span></div>
+                    <div class="traffic__item traffic__item--walkway" aria-label="Путешествует пешком"><span class="tooltip">Пешком</span></div>
                 </div>
                 <div class="catalog-item__level">
                     <p class="catalog-title catalog-title--level">левел:</p>
-                    <div class="level">99</div>
+                    <div class="level level--catalog">99</div>
                 </div>
                 <a class="catalog-item__button" href="">Позвать!</a>
             </div>
@@ -254,14 +256,14 @@
                 </div>
                 <div class="traffic traffic--catalog-item">
                     <p class="catalog-title catalog-title--traffic">транспорт:</p>
-                    <div class="traffic__item traffic__item--aircraft traffic__item--active" aria-label="Путешествует с помощью авиаперелетов"><span class="traffic__tooltip">Авиаперелет</span></div>
-                    <div class="traffic__item traffic__item--car traffic__item--active" aria-label="Путешествует с помощью автотранспорта"><span class="traffic__tooltip">Автотранспорт</span></div>
-                    <div class="traffic__item traffic__item--bike" aria-label="Путешествует с помощью велосипеда"><span class="traffic__tooltip">Велосипед</span></div>
-                    <div class="traffic__item traffic__item--walkway traffic__item--active" aria-label="Путешествует пешком"><span class="traffic__tooltip">Пешком</span></div>
+                    <div class="traffic__item traffic__item--aircraft traffic__item--active" aria-label="Путешествует с помощью авиаперелетов"><span class="tooltip">Авиаперелет</span></div>
+                    <div class="traffic__item traffic__item--car traffic__item--active" aria-label="Путешествует с помощью автотранспорта"><span class="tooltip">Автотранспорт</span></div>
+                    <div class="traffic__item traffic__item--bike" aria-label="Путешествует с помощью велосипеда"><span class="tooltip">Велосипед</span></div>
+                    <div class="traffic__item traffic__item--walkway traffic__item--active" aria-label="Путешествует пешком"><span class="tooltip">Пешком</span></div>
                 </div>
                 <div class="catalog-item__level">
                     <p class="catalog-title catalog-title--level">левел:</p>
-                    <div class="level">80</div>
+                    <div class="level level--catalog">80</div>
                 </div>
                 <a class="catalog-item__button" href="">Позвать!</a>
             </div>
@@ -290,14 +292,14 @@
                 </div>
                 <div class="traffic traffic--catalog-item">
                     <p class="catalog-title catalog-title--traffic">транспорт:</p>
-                    <div class="traffic__item traffic__item--aircraft traffic__item--active" aria-label="Путешествует с помощью авиаперелетов"><span class="traffic__tooltip">Авиаперелет</span></div>
-                    <div class="traffic__item traffic__item--car" aria-label="Путешествует с помощью автотранспорта"><span class="traffic__tooltip">Автотранспорт</span></div>
-                    <div class="traffic__item traffic__item--bike traffic__item--active" aria-label="Путешествует с помощью велосипеда"><span class="traffic__tooltip">Велосипед</span></div>
-                    <div class="traffic__item traffic__item--walkway" aria-label="Путешествует пешком"><span class="traffic__tooltip">Пешком</span></div>
+                    <div class="traffic__item traffic__item--aircraft traffic__item--active" aria-label="Путешествует с помощью авиаперелетов"><span class="tooltip">Авиаперелет</span></div>
+                    <div class="traffic__item traffic__item--car" aria-label="Путешествует с помощью автотранспорта"><span class="tooltip">Автотранспорт</span></div>
+                    <div class="traffic__item traffic__item--bike traffic__item--active" aria-label="Путешествует с помощью велосипеда"><span class="tooltip">Велосипед</span></div>
+                    <div class="traffic__item traffic__item--walkway" aria-label="Путешествует пешком"><span class="tooltip">Пешком</span></div>
                 </div>
                 <div class="catalog-item__level">
                     <p class="catalog-title catalog-title--level">левел:</p>
-                    <div class="level">25</div>
+                    <div class="level level--catalog">25</div>
                 </div>
                 <a class="catalog-item__button" href="">Позвать!</a>
             </div>
@@ -324,14 +326,14 @@
                 </div>
                 <div class="traffic traffic--catalog-item">
                     <p class="catalog-title catalog-title--traffic">транспорт:</p>
-                    <div class="traffic__item traffic__item--aircraft traffic__item--active" aria-label="Путешествует с помощью авиаперелетов"><span class="traffic__tooltip">Авиаперелет</span></div>
-                    <div class="traffic__item traffic__item--car traffic__item--active" aria-label="Путешествует с помощью автотранспорта"><span class="traffic__tooltip">Автотранспорт</span></div>
-                    <div class="traffic__item traffic__item--bike" aria-label="Путешествует с помощью велосипеда"><span class="traffic__tooltip">Велосипед</span></div>
-                    <div class="traffic__item traffic__item--walkway" aria-label="Путешествует пешком"><span class="traffic__tooltip">Пешком</span></div>
+                    <div class="traffic__item traffic__item--aircraft traffic__item--active" aria-label="Путешествует с помощью авиаперелетов"><span class="tooltip">Авиаперелет</span></div>
+                    <div class="traffic__item traffic__item--car traffic__item--active" aria-label="Путешествует с помощью автотранспорта"><span class="tooltip">Автотранспорт</span></div>
+                    <div class="traffic__item traffic__item--bike" aria-label="Путешествует с помощью велосипеда"><span class="tooltip">Велосипед</span></div>
+                    <div class="traffic__item traffic__item--walkway" aria-label="Путешествует пешком"><span class="tooltip">Пешком</span></div>
                 </div>
                 <div class="catalog-item__level">
                     <p class="catalog-title catalog-title--level">левел:</p>
-                    <div class="level">50</div>
+                    <div class="level level--catalog">50</div>
                 </div>
                 <a class="catalog-item__button" href="">Позвать!</a>
             </div>
@@ -360,8 +362,8 @@
                 </li>
             </ul>
             <div class="page-footer__copyright copyright">
-                <p class="copyright__text">Разработано</p>
-                <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img class="copyright__image" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип «HTML Academy»"></a>
+              <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+                <p class="copyright__text">Разработано</p><img class="copyright__image" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип «HTML Academy»"></a>
             </div>
         </div>
     </footer>

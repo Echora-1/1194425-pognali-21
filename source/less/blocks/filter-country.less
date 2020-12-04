@@ -1,0 +1,44 @@
+.filter-country {
+  background-color: rgb(@filter_background);
+}
+
+.filter-country__title {
+  font-weight: bold;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: uppercase;
+  color: rgb(@blue_background);
+}
+
+.filter-country__toggle {
+  background-color: rgb(@filter_background);
+  border: none;
+  outline: none;
+}
+
+.filter-country__link {
+  line-height: 22px;
+  text-decoration: none;
+  color: rgb(@special_grey);
+  font-weight: 400;
+}
+
+.filter-country__close {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: rgb(@blue_background);
+  background-color: rgb(@filter_close);
+
+  &:hover {
+    background-color: rgb(@filter_close_hover);
+  }
+
+  &:active {
+    color: rgba(@blue_background, 0.3);
+  }
+}
