@@ -2,25 +2,106 @@
   width: 270px;
   margin: 0 auto;
   padding: 0 25px;
-}
 
-.container--options {
-  background-image: url("../img/globe-back-mobile.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 10px;
-}
+  @media (min-width: @tablet-width) {
+    width: 688px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1324px;
+    padding: 0 58px;
+  }
+
+  &--options {
+    background-image: url("../img/globe-back-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 10px;
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  &--travelers {
+    padding-top: 68px;
+    background-image: url("../img/smolov-back-desktop.png");
+    background-repeat: no-repeat;
+    background-position: 130px 30px;
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+      align-items: start;
+    }
+  }
+
+  &--filter-travelers {
+    background-color: rgb(@basic_yellow);
+    width: 220px;
+    padding-top: 26px;
+    padding-bottom: 22px;
+  }
+
+  &--page-header {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @tablet-width) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &--middle-nav {
+    display: none;
 
 
-.container--travelers {
-  padding-top: 68px;
-  background-image: url("../img/smolov-back-desktop.png");
-  background-repeat: no-repeat;
-  background-position: 130px 30px;
-}
+    @media (min-width: @desktop-width) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 
-.container--filter-travelers {
-  background-color: rgb(@basic_yellow);
-  width: 220px;
-  padding-top: 26px;
-  padding-bottom: 22px;
+  &--direction {
+    @media (min-width: @desktop-width) {
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &--tariffs {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &--feedback {
+    @media (min-width: @desktop-width) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &--address {
+    @media (min-width: @desktop-width) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &--page-footer {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
 }

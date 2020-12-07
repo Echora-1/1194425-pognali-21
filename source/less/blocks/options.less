@@ -1,5 +1,9 @@
 .options {
   background-color: rgb(@basic_blue);
+
+  &--middle-nav {
+    background-color: rgb(@white);
+  }
 }
 
 .options__slogan {
@@ -7,6 +11,7 @@
   font-size: 36px;
   line-height: 40px;
   color: rgb(@white);
+  width: 238px;
 }
 
 .options__image {
@@ -15,30 +20,60 @@
   left: 40px;
 }
 
-.options__link--call {
-  background-color: rgb(@special_orange);
-}
+.options__link {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 
-.options__link--mail {
-  background-color: rgb(@special_yellow_dark);
-}
+  &--call {
+    background-color: rgb(@special_orange);
+  }
 
-.options__link--login {
-  font-size: 17px;
-  line-height: 20px;
-  text-transform: uppercase;
-  background-color: rgb(@basic_yellow);
-  color: rgb(@basic_blue);
-  text-decoration: none;
-  position: relative;
-  z-index: 1;
-
-  &:hover {
+  &--mail {
     background-color: rgb(@special_yellow_dark);
   }
 
-  &:active {
-    color: rgba(@basic_blue, 0.3);
+  &--login {
+    font-size: 17px;
+    line-height: 20px;
+    text-transform: uppercase;
+    background-color: rgb(@basic_yellow);
+    color: rgb(@basic_blue);
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      background-color: rgb(@special_yellow_dark);
+    }
+
+    &:active {
+      color: rgba(@basic_blue, 0.3);
+    }
+  }
+
+  &--call-header {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+
+  &--mail-header {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+
+  &--login-header {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
   }
 }
 
@@ -55,6 +90,11 @@
   list-style: none;
   position: relative;
   top: -18px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .options__item--number-1 {

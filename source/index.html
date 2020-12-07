@@ -9,12 +9,20 @@
 
 <body class="page__body">
     <header class="page-header">
-        <div class="container">
+        <div class="container container--page-header">
             <a href="" class="logo">
                 <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип «Погнали»">
             </a>
             <nav class="main-nav">
-                <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+                <div class="main-nav__logo-wrapper">
+                  <a href="" class="logo logo--main-nav">
+                      <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип «Погнали»">
+                  </a>
+                  <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+                  <div class="main-nav__list user-list user-list--logo-wrapper">
+                    <a class="user-list__login" href="">авторизация</a>
+                  </div>
+                </div>
                 <div class="main-nav__wrapper">
                     <ul class="main-nav__list site-list">
                         <li class="site-list__item">
@@ -27,10 +35,10 @@
                             <a class="site-list__link" href="catalog.html">Попутчики</a>
                         </li>
                     </ul>
-                    <div class="main-nav__list user-list">
+                    <div class="main-nav__list user-list user-list--main-nav">
                         <a class="user-list__login" href="">авторизация</a>
                     </div>
-                    <div class="contacts">
+                    <div class="contacts contacts--main-nav">
                         <a class="contacts__link contacts__link--phone" href="tel:88005558628">8 800 555-86-28</a>
                         <a class="contacts__link contacts__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
                     </div>
@@ -47,6 +55,11 @@
                     </ul>
                 </div>
             </nav>
+            <div class="options options--header">
+              <a class="options__link options__link--call options__link--call-header" href="tel:88005558628"><span class="visually-hidden">Позвонить нам</span></a>
+              <a class="options__link options__link--mail options__link--mail-header" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Написать нам</span></a>
+              <a class="options__link options__link--login options__link--login-header" href="">авторизация</a>
+            </div>
         </div>
     </header>
 
@@ -81,17 +94,44 @@
                 </ol>
             </div>
         </section>
+        <div class="middle-nav">
+          <div class="container container--middle-nav">
+            <a href="" class="logo">
+              <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип «Погнали»">
+            </a>
+            <ul class="site-list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="">О сервисе</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="form.html">Направления</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="catalog.html">Попутчики</a>
+              </li>
+          </ul>
+            <div class="options options--middle-nav">
+              <a class="options__link options__link--call options__link--call-header" href="tel:88005558628"><span class="visually-hidden">Позвонить нам</span></a>
+              <a class="options__link options__link--mail options__link--mail-header" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Написать нам</span></a>
+              <a class="options__link options__link--login options__link--login-header" href="">авторизация</a>
+            </div>
+          </div>
+        </div>
         <section class="about">
             <div class="container">
                 <h2 class="title title--about">О сервисе</h2>
                 <p class="description description--about">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
                 <p class="subtitle subtitle--about">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+                <a class="button button--about" href="form.html">Подробнее</a>
             </div>
         </section>
         <section class="direction">
-            <div class="container">
-                <h2 class="title title--direction">Направления</h2>
-                <p class="description description--direction">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+            <div class="container container--direction">
+                <div class="direction__wrapper">
+                    <h2 class="title title--direction">Направления</h2>
+                    <p class="description description--direction">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+                    <a class="button button--direction-all-desktop" href="form.html">Показать все</a>
+                </div>
                 <ul class="direction__list">
                     <li class="direction__item direction__item--thailand item-direction">
                         <img class="direction__image" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Таиланд">
@@ -126,9 +166,12 @@
         </section>
         <section class="travelers">
             <div class="container container--travelers">
-                <h2 class="title title--travelers">Попутчики</h2>
-                <p class="description description--travelers">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-                <p class="subtitle subtitle--travelers">Теперь можно легко найти единомышленников!</p>
+                <div class="travelers__wrapper">
+                    <h2 class="title title--travelers">Попутчики</h2>
+                    <p class="description description--travelers">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+                    <p class="subtitle subtitle--travelers">Теперь можно легко найти единомышленников!</p>
+                    <a class="button button--travelers-all-desktop" href="catalog.html">Показать все</a>
+                </div>
                 <ul class="travelers__list">
                     <li class="travelers__item travelers__item--user-1">
                         <div class="level level--travelers"><span class="uppercase">99</span>level</div>
@@ -180,7 +223,7 @@
             </div>
         </section>
         <section class="tariffs">
-            <div class="container">
+            <div class="container container--tariffs">
                 <h2 class="visually-hidden">Наши тарифы</h2>
                 <p class="title title--tariffs">Добавьте свой профиль</p>
                 <ul class="tariffs__list">
@@ -199,7 +242,7 @@
         </section>
         <section class="feedback">
             <h2 class="visually-hidden">Наши контакты</h2>
-            <div class="container">
+            <div class="container container--feedback">
                 <p class="title title--feedback">Заинтересовались?</p>
                 <p class="description description--feedback">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="">авторизуйтесь</a>.
                 </p>
@@ -209,14 +252,14 @@
                     <button class="feedback__button" type="submit">Регистрация</button>
                 </form>
                 <p class="description description--feedback-mail">Остались вопросы? Мы с радостью на них ответим!</p>
-                <div class="contacts">
+                <div class="contacts contacts--feedback">
                     <a class="contacts__link contacts__link--phone contacts__link--bottom" href="tel:88005558628">8 800 555-86-28</a>
                     <a class="contacts__link contacts__link--mail contacts__link--bottom" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
                 </div>
             </div>
         </section>
         <section class="address">
-            <div class="container">
+            <div class="container container--address">
                 <h2 class="visually-hidden">Наш адрес</h2>
                 <p class="address__text">ул. Большая Конюшенная, 19/8</p>
                 <a class="button button--address" href="https://www.google.ru/maps/dir/59.9392811,30.3277003/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB%D0%B8%D1%86%D0%B0,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186/@59.9370746,30.3226504,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x469631057d105877:0x91c16b0cf63dfa74!2m2!1d30.3215286!2d59.9361074!3e2?hl=ru"
@@ -230,7 +273,7 @@
     </main>
 
     <footer class="page-footer">
-        <div class="container">
+        <div class="container container--page-footer">
             <a href="" class="logo">
                 <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип «Погнали»">
             </a>
