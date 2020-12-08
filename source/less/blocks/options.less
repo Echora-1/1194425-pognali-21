@@ -1,8 +1,16 @@
 .options {
   background-color: rgb(@basic_blue);
+}
 
-  &--middle-nav {
-    background-color: rgb(@white);
+.options__container {
+  background-image: url("../img/globe-back-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 10px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
   }
 }
 

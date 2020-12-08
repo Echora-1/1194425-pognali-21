@@ -39,31 +39,16 @@
 
   &--direction-all {
     @media (min-width: @desktop-width) {
-      display: none;
-    }
-  }
-
-  &--direction-all-desktop {
-    display: none;
-
-    @media (min-width: @desktop-width) {
-      display: inline-block;
-      text-align: center;
+      max-width: 275px;
+      max-height: 80px;
+      grid-column: 2;
     }
   }
 
   &--travelers-all {
     @media (min-width: @desktop-width) {
-      display: none;
-    }
-  }
-
-  &--travelers-all-desktop {
-    display: none;
-
-    @media (min-width: @desktop-width) {
-      display: inline-block;
-      text-align: center;
+      max-width: 275px;
+      max-height: 80px;
     }
   }
 }
