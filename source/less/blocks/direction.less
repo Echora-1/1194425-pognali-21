@@ -4,8 +4,31 @@
   background-color: rgb(@light_gray);
 }
 
+.direction__container {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+.direction__wrapper {
+  @media (min-width: @desktop-width) {
+    max-width: 360px;
+    grid-column: 2;
+  }
+}
+
 .direction__list {
   list-style: none;
+  flex-wrap: wrap;
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1;
+    grid-row: 1;
+  }
 }
 
 .direction__description {

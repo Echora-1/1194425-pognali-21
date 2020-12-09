@@ -2,6 +2,23 @@
   background-color: rgb(@white);
 }
 
+.main-nav__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    width: 688px;
+  }
+}
+
+.main-nav__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .main-nav__toggle {
   border: none;
   outline: none;

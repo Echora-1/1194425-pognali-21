@@ -1,3 +1,21 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+
+  &--main-nav {
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  &--feedback {
+    @media (min-width: @desktop-width) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
 .contacts__link {
   color: rgb(@blue_background);
   text-transform: uppercase;

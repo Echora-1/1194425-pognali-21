@@ -4,6 +4,8 @@
   color: rgb(@basic_blue_light);
   background-color: rgb(@basic_yellow);
   text-decoration: none;
+  display: inline-block;
+  text-align: center;
 
   &:hover {
     background-color: rgb(@special_yellow_dark);
@@ -23,6 +25,30 @@
 
     &:active {
       color: rgba(@white, 0.3);
+    }
+  }
+
+  &--about {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: inline-block;
+      text-align: center;
+    }
+  }
+
+  &--direction-all {
+    @media (min-width: @desktop-width) {
+      max-width: 275px;
+      max-height: 80px;
+      grid-column: 2;
+    }
+  }
+
+  &--travelers-all {
+    @media (min-width: @desktop-width) {
+      max-width: 275px;
+      max-height: 80px;
     }
   }
 }

@@ -1,26 +1,15 @@
 .container {
-  width: 270px;
+  width: 320px;
   margin: 0 auto;
   padding: 0 25px;
-}
 
-.container--options {
-  background-image: url("../img/globe-back-mobile.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 10px;
-}
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 0 40px;
+  }
 
-
-.container--travelers {
-  padding-top: 68px;
-  background-image: url("../img/smolov-back-desktop.png");
-  background-repeat: no-repeat;
-  background-position: 130px 30px;
-}
-
-.container--filter-travelers {
-  background-color: rgb(@basic_yellow);
-  width: 220px;
-  padding-top: 26px;
-  padding-bottom: 22px;
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding: 0 58px;
+  }
 }

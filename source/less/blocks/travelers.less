@@ -3,14 +3,39 @@
   background-color: rgb(@blue_background);
 }
 
+.travelers__container {
+  padding-top: 68px;
+  background-image: url("../img/smolov-back-desktop.png");
+  background-repeat: no-repeat;
+  background-position: 130px 30px;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.travelers__wrapper {
+  max-height: 490px;
+}
+
 .travelers__list {
+  padding: 0;
   padding-top: 51px;
   list-style: none;
   background-image: url("../img/rogovaya-back-desktop.png");
   background-repeat: no-repeat;
   background-position: 5px 20px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
+.travelers__item {
+  max-width: 285px;
+}
 
 .travelers__description {
   background-color: rgb(@white);
