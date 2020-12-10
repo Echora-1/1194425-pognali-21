@@ -1,16 +1,136 @@
 .step {
   background-color: rgb(@white);
+  padding: 23px;
+  margin-bottom: 10px;
+  margin-right: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px;
+    max-width: 618px;
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1320px;
+    padding: 160px 100px;
+    margin-bottom: 43px;
+  }
+
+  &--1 {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: grid;
+      grid-template-rows: auto auto auto auto auto auto;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &--2 {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: grid;
+      grid-template-rows: auto auto auto auto;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &--3 {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: grid;
+      grid-template-rows: auto auto auto auto;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
 }
 
 .step__title {
   font-size: 20px;
   line-height: 20px;
   color: rgb(@basic_blue_light);
+
+  &--1 {
+    @media (min-width: @tablet-width) {
+      order: -4;
+    }
+  }
 }
 
 .step__description {
   font-weight: 400;
   line-height: 22px;
+
+  &--1 {
+    @media (min-width: @tablet-width) {
+      order: -3;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-row: 2;
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  }
+
+  &--2 {
+    @media (min-width: @desktop-width) {
+      grid-row: 2;
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  }
+
+  &--3 {
+    @media (min-width: @desktop-width) {
+      grid-row: 2;
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  }
+}
+
+.step__travelers {
+  @media (min-width: @tablet-width) {
+    order: -2;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+
+.step__days {
+  @media (min-width: @desktop-width) {
+    grid-row: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+
+.step__travelers,
+.step__days {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 220px;
 }
 
 .step__label-quantity {
@@ -52,6 +172,18 @@
   }
 }
 
+.step__kids {
+  @media (min-width: @tablet-width) {
+    order: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+}
+
 .step__checkbox-kids {
   position: absolute;
   z-index: -1;
@@ -63,4 +195,28 @@
   font-size: 15px;
   line-height: 15px;
   color: rgb(@basic_blue_light);
+}
+
+.step__calendar {
+  @media (min-width: @desktop-width) {
+    grid-row: 5;
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+}
+
+.step__route {
+  @media (min-width: @desktop-width) {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.step__plan {
+  @media (min-width: @desktop-width) {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }

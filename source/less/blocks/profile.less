@@ -4,6 +4,46 @@
   padding-bottom: 34px;
 }
 
+.profile__container {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: auto 1fr auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-rows: 1fr min-content 1fr;
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+}
+
+.profile__level {
+  @media (min-width: @desktop-width) {
+    grid-row: 1;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    text-align: right;
+  }
+}
+
+.profile__image {
+  @media (min-width: @tablet-width) {
+    grid-row: 1;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 1;
+    grid-column-start: 5;
+    grid-column-end: 6;
+  }
+}
+
 .profile__change-input {
   width: 0.1px;
   height: 0.1px;
@@ -21,6 +61,23 @@
   color: rgb(@basic_blue);
   background-color: rgb(@special_blue_light);
   cursor: pointer;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    max-height: 60px;
+    max-width: 618px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 2;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    max-height: 60px;
+    max-width: 190px;
+  }
 
   &:hover {
     background-color: rgb(@special_blue_hover);
@@ -29,5 +86,34 @@
   &:active {
     background-color: rgb(@special_blue_light);
     color: rgba(@basic_blue, 0.3);
+  }
+}
+
+.profile__hobbies {
+  @media (min-width: @tablet-width) {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
+
+.profile__transport {
+  @media (min-width: @tablet-width) {
+    grid-row: 1;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 3;
+    grid-column-start: 5;
+    grid-column-end: 6;
   }
 }

@@ -20,6 +20,12 @@
     &:active {
       color: rgba(@basic_blue_light, 0.3);
     }
+
+    @media (min-width: @desktop-width) {
+      grid-row: 4;
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
   }
 
   &--last {
@@ -29,6 +35,20 @@
 
     &:active {
       color: rgba(@basic_blue_light, 0.3);
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-row: 4;
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
+  }
+
+  &--step-1 {
+    @media (min-width: @desktop-width) {
+      grid-row: 6;
+      grid-column-start: 1;
+      grid-column-end: 2;
     }
   }
 }

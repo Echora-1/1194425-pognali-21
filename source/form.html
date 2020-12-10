@@ -10,12 +10,20 @@
 
 <body class="page__body">
     <header class="page-header">
-        <div class="container">
+        <div class="container page-header__container">
             <a href="index.html" class="logo">
-                <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип «Погнали»">
+                <img class="logo__image" src="img/logo-white.png" width="100" height="15" alt="Логотип «Погнали»">
             </a>
             <nav class="main-nav">
-                <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+                <div class="main-nav__logo-wrapper">
+                    <a href="" class="logo logo--main-nav">
+                        <img class="logo__image" src="img/logo.png" width="100" height="15" alt="Логотип «Погнали»">
+                    </a>
+                  <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+                  <div class="main-nav__list user-list user-list--logo-wrapper">
+                    <a class="user-list__login" href="">авторизация</a>
+                  </div>
+                </div>
                 <div class="main-nav__wrapper">
                     <ul class="main-nav__list site-list">
                         <li class="site-list__item">
@@ -28,10 +36,10 @@
                             <a class="site-list__link" href="catalog.html">Попутчики</a>
                         </li>
                     </ul>
-                    <div class="main-nav__list user-list">
+                    <div class="main-nav__list user-list user-list--main-nav">
                         <a class="user-list__login" href="">авторизация</a>
                     </div>
-                    <div class="contacts">
+                    <div class="contacts contacts--main-nav">
                         <a class="contacts__link contacts__link--phone" href="tel:88005558628">8 800 555-86-28</a>
                         <a class="contacts__link contacts__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
                     </div>
@@ -48,6 +56,11 @@
                     </ul>
                 </div>
             </nav>
+            <div class="options options--header">
+              <a class="options__link options__link--call options__link--call-header" href="tel:88005558628"><span class="visually-hidden">Позвонить нам</span></a>
+              <a class="options__link options__link--mail options__link--mail-header" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Написать нам</span></a>
+              <a class="options__link options__link--login options__link--login-header" href="">авторизация</a>
+            </div>
         </div>
     </header>
 
@@ -59,10 +72,10 @@
         </div>
         <form class="form" method="get" action="https://echo.htmlacademy.ru">
             <div class="profile">
-                <div class="container">
+                <div class="container profile__container">
                     <h2 class="visually-hidden">Мой профиль</h2>
-                    <div class="level level--form"><span class="uppercase uppercase--form">80</span>level</div>
-                    <img class="profile__image" src="https://via.placeholder.com/100x100" width="100" height="100" alt="Ваше изображение">
+                    <div class="level level--form profile__level"><span class="uppercase uppercase--form">80</span>level</div>
+                    <img class="profile__image" src="img/traveler-form.png" width="100" height="100" alt="Ваше изображение">
                     <input class="profile__change-input" type="file" id="change-photo">
                     <label class="profile__change-label" for="change-photo">сменить фото</label>
                     <div class="profile__hobbies hobbies">
@@ -100,12 +113,18 @@
                     <ol class="plans__list">
                         <li class="plans__item">
                             <p class="plans__direction">Франция, Италия</p>
-                            <p class="plans__description">3 попутчика 26 мар — 29 мар</p>
+                            <div class="plans__description">
+                              <p class="plans__travelers"> 3 попутчика</p>
+                              <p class="plans__date">26 мар — 29 мар</p>
+                            </div>
                             <a class="plans__link" href="">изменить</a>
                         </li>
                         <li class="plans__item">
                             <p class="plans__direction">Таиланд, Индонезия</p>
-                            <p class="plans__description">1 попутчик 1 июл — 15 июл</p>
+                            <div class="plans__description">
+                              <p class="plans__travelers"> 1 попутчик</p>
+                              <p class="plans__date">1 июл — 15 июл</p>
+                            </div>
                             <a class="plans__link" href="">изменить</a>
                         </li>
                     </ol>
@@ -119,9 +138,14 @@
                         <div class="marker__item"></div>
                         <div class="marker__item"></div>
                     </div>
-                    <div class="add-plan__step step" id="step-1">
-                        <h3 class="step__title">Шаг 1. Даты пребывания</h3>
-                        <p class="step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+                    <div class="add-plan__step step step--1" id="step-1">
+                        <h3 class="step__title step__title--1">Шаг 1. Даты пребывания</h3>
+                        <p class="step__description step__description--1">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+                        <div class="marker marker--desktop">
+                          <p class="marker__item-desktop marker__item-desktop--active">Даты</p>
+                          <p class="marker__item-desktop">маршрут</p>
+                          <p class="marker__item-desktop">развлечения</p>
+                        </div>
                         <div class="step__travelers">
                             <label class="step__label-quantity" for="quantity-travelers">ищу попутчиков: <span class="step__abbreviation">чел.</span></label>
                             <button class="step__minus step__minus--travelers" type="button" aria-label="убрать попутчика"></button>
@@ -210,11 +234,16 @@
                                 </tr>
                             </table>
                         </div>
-                        <a class="form-button form-button--next" href="#step-2">Следующий шаг</a>
+                        <a class="form-button form-button--next form-button--step-1" href="#step-2">Следующий шаг</a>
                     </div>
-                    <div class="add-plan__step step" id="step-2">
+                    <div class="add-plan__step step step--2" id="step-2">
                         <h3 class="step__title">Шаг 2. Маршрут</h3>
-                        <p class="step__description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+                        <p class="step__description step__description--2">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+                        <div class="marker marker--desktop">
+                          <p class="marker__item-desktop">Даты</p>
+                          <p class="marker__item-desktop marker__item-desktop--active">маршрут</p>
+                          <p class="marker__item-desktop">развлечения</p>
+                        </div>
                         <div class="step__route route">
                             <div class="route__item">
                                 <button class="route__title" type="button">Босния и герцеговина</button>
@@ -287,18 +316,23 @@
                         <a class="form-button form-button--next" href="#step-3">Следующий шаг</a>
                         <a class="form-button form-button--last" href="#step-1">На шаг назад</a>
                     </div>
-                    <div class="add-plan__step step" id="step-3">
+                    <div class="add-plan__step step step--3" id="step-3">
                         <h3 class="step__title">Шаг 3. Развлечения</h3>
-                        <p class="step__description">Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+                        <p class="step__description step__description--3">Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+                        <div class="marker marker--desktop">
+                          <p class="marker__item-desktop">Даты</p>
+                          <p class="marker__item-desktop">маршрут</p>
+                          <p class="marker__item-desktop marker__item-desktop--active">развлечения</p>
+                        </div>
                         <div class="step__plan plan">
                             <div class="plan__item">
                                 <label class="plan__title" for="plan-description-1">Босния и Герцеговина</label>
-                                <img class="plan__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг">
+                                <img class="plan__flag" src="img/Bosnia-and-Herzegovina.png" width="35" height="24" alt="Флаг">
                                 <textarea class="plan__description" id="plan-description-1" name="plan" rows="7" placeholder="План действий"></textarea>
                             </div>
                             <div class="plan__item">
                                 <label class="plan__title" for="plan-description-2">Чехия</label>
-                                <img class="plan__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг">
+                                <img class="plan__flag" src="img/czech-direction-image.png" width="35" height="24" alt="Флаг">
                                 <textarea class="plan__description" id="plan-description-2" name="plan" rows="7" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                             </div>
                         </div>
@@ -311,9 +345,9 @@
     </main>
 
     <footer class="page-footer">
-      <div class="container">
+      <div class="container page-footer__container">
           <a href="" class="logo">
-              <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип «Погнали»">
+              <img class="logo__image" src="img/logo.png" width="100" height="15" alt="Логотип «Погнали»">
           </a>
           <ul class="social social--footer">
               <li class="social__item">
@@ -328,7 +362,7 @@
           </ul>
           <div class="page-footer__copyright copyright">
               <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-                  <p class="copyright__text">Разработано</p><img class="copyright__image" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип «HTML Academy»"></a>
+                  <p class="copyright__text">Разработано</p><img class="copyright__image" src="img/html-academy.svg" width="27" height="34" alt="Логотип «HTML Academy»"></a>
           </div>
       </div>
   </footer>
