@@ -138,29 +138,35 @@
                         <div class="marker__item"></div>
                         <div class="marker__item"></div>
                     </div>
-                    <div class="add-plan__step step step--1" id="step-1">
-                        <h3 class="step__title step__title--1">Шаг 1. Даты пребывания</h3>
-                        <p class="step__description step__description--1">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-                        <div class="marker marker--desktop">
-                          <p class="marker__item-desktop marker__item-desktop--active">Даты</p>
-                          <p class="marker__item-desktop">маршрут</p>
-                          <p class="marker__item-desktop">развлечения</p>
+                    <div class="add-plan__step step" id="step-1">
+                        <div class="step__top-wrapper">
+                            <h3 class="step__title">Шаг 1. Даты пребывания</h3>
+                            <div class="marker marker--desktop">
+                              <p class="marker__item-desktop marker__item-desktop--active">Даты</p>
+                              <p class="marker__item-desktop">маршрут</p>
+                              <p class="marker__item-desktop">развлечения</p>
+                            </div>
+                            <p class="step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
                         </div>
-                        <div class="step__travelers">
-                            <label class="step__label-quantity" for="quantity-travelers">ищу попутчиков: <span class="step__abbreviation">чел.</span></label>
-                            <button class="step__minus step__minus--travelers" type="button" aria-label="убрать попутчика"></button>
-                            <input class="step__quantity-input step__quantity-input--travelers" id="quantity-travelers" type="text" value="2" name="quantity-travelers">
-                            <button class="step__plus step__plus--travelers" type="button" aria-label="добавить попутчика"></button>
-                        </div>
-                        <div class="step__days">
-                            <label class="step__label-quantity" for="quantity-days">длительность: <span class="step__abbreviation">дн.</span></label>
-                            <button class="step__minus step__minus--days" type="button" aria-label="уменьшить длительность"></button>
-                            <input class="step__quantity-input step__quantity-input--days" id="quantity-days" type="text" value="3" name="quantity-days">
-                            <button class="step__plus step__plus--days" type="button" aria-label="увеличить длительность"></button>
-                        </div>
-                        <div class="step__kids">
-                            <input class="step__checkbox-kids" type="checkbox" name="kids" id="with-kids">
-                            <label class="step__with-kids" for="with-kids">Можно с детьми</label>
+                        <div class="step__middle-wrapper">
+                            <div class="step__travelers">
+                                <label class="step__label-quantity" for="quantity-travelers">ищу попутчиков:</label>
+                                <button class="step__minus step__minus--travelers" type="button" aria-label="убрать попутчика"></button>
+                                <input class="step__quantity-input step__quantity-input--travelers" id="quantity-travelers" type="text" value="2" name="quantity-travelers">
+                                <button class="step__plus step__plus--travelers" type="button" aria-label="добавить попутчика"></button>
+                                <span class="step__abbreviation">чел.</span>
+                            </div>
+                            <div class="step__kids">
+                                <input class="step__checkbox-kids" type="checkbox" name="kids" id="with-kids">
+                                <label class="step__with-kids" for="with-kids">Можно с детьми</label>
+                            </div>
+                            <div class="step__days">
+                                <label class="step__label-quantity" for="quantity-days">длительность:</label>
+                                <button class="step__minus step__minus--days" type="button" aria-label="уменьшить длительность"></button>
+                                <input class="step__quantity-input step__quantity-input--days" id="quantity-days" type="text" value="3" name="quantity-days">
+                                <button class="step__plus step__plus--days" type="button" aria-label="увеличить длительность"></button>
+                                <span class="step__abbreviation">дн.</span>
+                            </div>
                         </div>
                         <div class="step__calendar calendar">
                             <div class="calendar__month">
@@ -234,15 +240,17 @@
                                 </tr>
                             </table>
                         </div>
-                        <a class="form-button form-button--next form-button--step-1" href="#step-2">Следующий шаг</a>
+                        <a class="form-button form-button--next" href="#step-2">Следующий шаг</a>
                     </div>
-                    <div class="add-plan__step step step--2" id="step-2">
-                        <h3 class="step__title">Шаг 2. Маршрут</h3>
-                        <p class="step__description step__description--2">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
-                        <div class="marker marker--desktop">
-                          <p class="marker__item-desktop">Даты</p>
-                          <p class="marker__item-desktop marker__item-desktop--active">маршрут</p>
-                          <p class="marker__item-desktop">развлечения</p>
+                    <div class="add-plan__step step" id="step-2">
+                        <div class="step__top-wrapper">
+                            <h3 class="step__title">Шаг 2. Маршрут</h3>
+                            <div class="marker marker--desktop">
+                              <p class="marker__item-desktop">Даты</p>
+                              <p class="marker__item-desktop marker__item-desktop--active">маршрут</p>
+                              <p class="marker__item-desktop">развлечения</p>
+                            </div>
+                            <p class="step__description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
                         </div>
                         <div class="step__route route">
                             <div class="route__item">
@@ -316,13 +324,15 @@
                         <a class="form-button form-button--next" href="#step-3">Следующий шаг</a>
                         <a class="form-button form-button--last" href="#step-1">На шаг назад</a>
                     </div>
-                    <div class="add-plan__step step step--3" id="step-3">
-                        <h3 class="step__title">Шаг 3. Развлечения</h3>
-                        <p class="step__description step__description--3">Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.</p>
-                        <div class="marker marker--desktop">
-                          <p class="marker__item-desktop">Даты</p>
-                          <p class="marker__item-desktop">маршрут</p>
-                          <p class="marker__item-desktop marker__item-desktop--active">развлечения</p>
+                    <div class="add-plan__step step" id="step-3">
+                        <div class="step__top-wrapper">
+                            <h3 class="step__title">Шаг 3. Развлечения</h3>
+                            <div class="marker marker--desktop">
+                              <p class="marker__item-desktop">Даты</p>
+                              <p class="marker__item-desktop">маршрут</p>
+                              <p class="marker__item-desktop marker__item-desktop--active">развлечения</p>
+                          </div>
+                            <p class="step__description">Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.</p>
                         </div>
                         <div class="step__plan plan">
                             <div class="plan__item">

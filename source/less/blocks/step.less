@@ -4,6 +4,11 @@
   margin-bottom: 10px;
   margin-right: 0;
 
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 40px;
     max-width: 618px;
@@ -15,49 +20,13 @@
     padding: 160px 100px;
     margin-bottom: 43px;
   }
+}
 
-  &--1 {
-    @media (min-width: @tablet-width) {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-    }
-
-    @media (min-width: @desktop-width) {
-      display: grid;
-      grid-template-rows: auto auto auto auto auto auto;
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-  }
-
-  &--2 {
-    display: flex;
-    flex-direction: column;
-
-    @media (min-width: @tablet-width) {
-      display: block;
-    }
-
-    @media (min-width: @desktop-width) {
-      display: grid;
-      grid-template-rows: auto auto auto auto;
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-  }
-
-  &--3 {
-    display: flex;
-    flex-direction: column;
-
-    @media (min-width: @tablet-width) {
-      display: block;
-    }
-
-    @media (min-width: @desktop-width) {
-      display: grid;
-      grid-template-rows: auto auto auto auto;
-      grid-template-columns: 1fr 1fr 1fr;
-    }
+.step__top-wrapper {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -65,64 +34,30 @@
   font-size: 20px;
   line-height: 20px;
   color: rgb(@basic_blue_light);
-
-  &--1 {
-    @media (min-width: @tablet-width) {
-      order: -4;
-    }
-  }
 }
 
 .step__description {
   font-weight: 400;
   line-height: 22px;
 
-  &--1 {
-    @media (min-width: @tablet-width) {
-      order: -3;
-    }
-
-    @media (min-width: @desktop-width) {
-      grid-row: 2;
-      grid-column-start: 1;
-      grid-column-end: 2;
-    }
-  }
-
-  &--2 {
-    @media (min-width: @desktop-width) {
-      grid-row: 2;
-      grid-column-start: 1;
-      grid-column-end: 2;
-    }
-  }
-
-  &--3 {
-    @media (min-width: @desktop-width) {
-      grid-row: 2;
-      grid-column-start: 1;
-      grid-column-end: 2;
-    }
+  @media (min-width: @desktop-width) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 }
 
-.step__travelers {
-  @media (min-width: @tablet-width) {
-    order: -2;
+.step__middle-wrapper {
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    flex-direction: column;
   }
 
   @media (min-width: @desktop-width) {
-    grid-row: 3;
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-}
-
-.step__days {
-  @media (min-width: @desktop-width) {
-    grid-row: 4;
-    grid-column-start: 1;
-    grid-column-end: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -131,6 +66,10 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 220px;
+
+  @media (min-width: @desktop-width) {
+    min-width: 500px;
+  }
 }
 
 .step__label-quantity {
@@ -139,11 +78,26 @@
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: rgb(@basic_blue_light);
+
+  @media (max-width: @desktop-width) {
+    order: -2;
+  }
 }
 
 .step__abbreviation {
   color: rgba(@basic_blue_light, 0.3);
   letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 16px;
+
+  @media (min-width: @desktop-width) {
+    color: rgb(@basic_blue_light);
+  }
+
+  @media (max-width: @desktop-width) {
+    order: -1;
+  }
 }
 
 .step__minus,
@@ -173,14 +127,12 @@
 }
 
 .step__kids {
-  @media (min-width: @tablet-width) {
-    order: -1;
+  @media (max-width: @mobile-width-only) {
+    order: 1;
   }
 
   @media (min-width: @desktop-width) {
-    grid-row: 3;
-    grid-column-start: 3;
-    grid-column-end: 4;
+    min-width: 250px;
   }
 }
 
@@ -195,28 +147,4 @@
   font-size: 15px;
   line-height: 15px;
   color: rgb(@basic_blue_light);
-}
-
-.step__calendar {
-  @media (min-width: @desktop-width) {
-    grid-row: 5;
-    grid-column-start: 2;
-    grid-column-end: 4;
-  }
-}
-
-.step__route {
-  @media (min-width: @desktop-width) {
-    grid-row: 3;
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-}
-
-.step__plan {
-  @media (min-width: @desktop-width) {
-    grid-row: 3;
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
 }
