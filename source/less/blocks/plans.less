@@ -6,15 +6,30 @@
 
 .plans__list {
   list-style: none;
+  padding-left: 0;
 }
 
 .plans__item {
   background-color: rgb(@white);
+
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    min-width: 618px;
+  }
 }
 
 .plans__direction {
   line-height: 16px;
   color: rgb(@basic_blue_light);
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    min-width: 500px;
+  }
 }
 
 .plans__description {
@@ -24,6 +39,14 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: rgb(@basic_blue_light);
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 354px;
+  }
 }
 
 .plans__link {
@@ -34,6 +57,7 @@
   text-transform: uppercase;
   text-decoration: none;
   color: rgba(@black, 0.3);
+  max-height: 20px;
 
   &:hover {
     color: rgba(@black, 0.6);
