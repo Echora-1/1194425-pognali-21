@@ -5,3 +5,29 @@
   text-transform: uppercase;
   color: rgb(@basic_blue_light);
 }
+
+.wish__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 170px;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 650px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
+  }
+}
+
+.wish__image {
+  margin-right: 6px;
+}
+
+.wish__title {
+  min-width: 100px;
+  margin-right: 10px;
+}

@@ -10,7 +10,20 @@
   background-color: rgb(@basic_yellow);
   width: 220px;
   padding-top: 26px;
+  padding-right: 20px;
+  padding-left: 20px;
   padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    min-width: 688px;
+    padding: 35px 37px;
+  }
+}
+
+.filter-travelers__interests {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    display: flex;
+  }
 }
 
 .filter-travelers__button {
