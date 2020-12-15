@@ -38,7 +38,8 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    display: block;
+    flex-direction: row;
+    align-items: center;
   }
 }
 
@@ -55,6 +56,10 @@
 
   @media (max-width: @mobile-width-only) {
     order: -1;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
   }
 }
 
@@ -85,7 +90,8 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    min-width: 126px;
+    min-width: 170px;
+    margin-right: 70px;
   }
 
   &--active {
