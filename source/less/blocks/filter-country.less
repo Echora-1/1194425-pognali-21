@@ -2,18 +2,114 @@
   background-color: rgb(@filter_background);
 }
 
+.filter-country__container {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
 .filter-country__title {
   font-weight: bold;
   font-size: inherit;
   line-height: inherit;
   text-transform: uppercase;
   color: rgb(@blue_background);
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    display: none;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    min-width: 227px;
+    order: -2;
+  }
+}
+
+.filter-country__top-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter-country__continent {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .filter-country__toggle {
   background-color: rgb(@filter_background);
   border: none;
   outline: none;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @media (max-width: @mobile-width-only) {
+    order: -1;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+  }
+}
+
+.filter-country__toggle-name {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.filter-country__middle-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.filter-country__alphabet {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.filter-country__list {
+  display: none;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    min-width: 170px;
+    margin-right: 70px;
+  }
+
+  &--active {
+    display: flex;
+  }
+}
+
+.filter-country__letter {
+  font-size: 60px;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: rgb(@blue_background);
+  text-decoration: none;
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
 }
 
 .filter-country__link {

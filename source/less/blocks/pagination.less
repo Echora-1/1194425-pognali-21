@@ -1,19 +1,35 @@
 .pagination {
   margin-top: 18px;
   margin-bottom: 48px;
+  background-color: rgb(@white);
+  border-radius: 20px 20px;
+  height: 51px;
+  width: 270px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 949px;
+  }
 }
 
 .pagination__button {
-  background-color: rgb(@white);
-  height: 51px;
-  width: 135px;
-  display: inline-block;
+  display: none;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: rgb(@basic_blue_light);
+  text-decoration: none;
 
-  &--last {
-    border-radius: 20px 0 0 20px;
+  &:hover {
+    color: rgba(@basic_blue_light, 0.6);
   }
 
-  &--next {
-    border-radius: 0 20px 20px 0;
+  @media (min-width: @tablet-width) {
+    display: inline;
   }
 }

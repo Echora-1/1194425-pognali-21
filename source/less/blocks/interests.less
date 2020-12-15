@@ -18,6 +18,15 @@
   }
 }
 
+.interests__item {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
 .interests__checkbox {
   position: absolute;
   z-index: -1;
@@ -43,4 +52,10 @@
   position: absolute;
   z-index: -1;
   opacity: 0;
+}
+
+.interests__level-filter {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    display: flex;
+  }
 }

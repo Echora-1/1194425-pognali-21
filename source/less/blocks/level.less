@@ -19,4 +19,14 @@
     line-height: 24px;
     font-weight: 700;
   }
+
+  &--desktop {
+    display: none;
+    background-color: transparent;
+    color: rgba(@black, 0.4);
+
+    @media (min-width: @tablet-width) {
+      display: inline;
+    }
+  }
 }
