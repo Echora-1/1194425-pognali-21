@@ -1,18 +1,109 @@
 .address {
-  padding-top: 31px;
-  padding-bottom: 35px;
+  padding-top: 61px;
+  padding-bottom: 25px;
   background-color: rgb(@basic_yellow);
+  z-index: 4;
+  margin-top: -50px;
+  min-height: 238px;
+  border-radius: 0 0 30px 30px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 374px;
+    padding-bottom: 40px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 200px;
+    padding-bottom: 20px;
+  }
 }
 
 .address__container {
+  min-height: 150px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    min-height: 170px;
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 }
 
 .address__text {
   line-height: 22px;
   color: rgb(@basic_blue_light);
-  margin-top: 0;
+  width: 150px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 23px;
+  margin-left: 61px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+    width: 430px;
+    margin-top: 57px;
+    margin-left: 129px;
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 69px;
+    margin-left: 271px;
+    margin-right: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 45px;
+    background-color: rgb(@blue_contacts);
+    border-radius: 27px;
+    left: -61px;
+    top: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 68px;
+      height: 68px;
+      border-radius: 40px;
+      top: -20px;
+      left: -94px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 90px;
+      height: 90px;
+      border-radius: 60px;
+      top: -30px;
+      left: -123px;
+    }
+  }
+}
+
+.address__icon {
+  position: absolute;
+  top: 12px;
+  left: 39px;
+  z-index: 4;
+
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 32px;
+    top: -2px;
+    left: 97px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 32px;
+    height: 42px;
+    top: 68px;
+    left: 312px;
+  }
 }

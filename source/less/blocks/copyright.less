@@ -4,6 +4,20 @@
   color: inherit;
   text-decoration: none;
   display: flex;
+  justify-content: space-between;
+  width: 270px;
+
+  @media (min-width: @tablet-width) {
+    width: 154px;
+    font-size: 20px;
+    line-height: 20px;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 2px;
+    margin-bottom: 2px;
+  }
 
   &:hover {
     color: rgba(@special_grey, 0.6);
@@ -13,5 +27,11 @@
   &:active {
     color: rgba(@special_grey, 0.3);
     opacity: 0.3;
+  }
+}
+
+.copyright__text {
+  @media (min-width: @tablet-width) {
+    margin-top: 9px;
   }
 }

@@ -3,4 +3,64 @@
   line-height: 22px;
   color: rgb(@white);
   margin-bottom: 0;
+  margin-left: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  &--quote-options {
+    margin-left: 10.5px;
+    display: inline-block;
+    width: 161px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 21px;
+      line-height: 25px;
+      width: 251px;
+      margin-left: 11px;
+    }
+
+    @media (min-width: @desktop-width) {
+      line-height: 24.4px;
+      width: 264px;
+      margin-left: 12px;
+    }
+  }
+
+  &--about {
+    margin-left: 24px;
+    width: 202px;
+
+    @media (min-width: @tablet-width) {
+      width: 265px;
+      margin-left: 34px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 425px;
+      margin-left: 72px;
+    }
+  }
+
+  &--travelers {
+    @media (min-width: @tablet-width) {
+      width: 265px;
+      margin-left: 36px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 425px;
+      margin-left: 72px;
+    }
+  }
+}
+
+.subtitle__br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }

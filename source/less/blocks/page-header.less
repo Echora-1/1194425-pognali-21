@@ -1,14 +1,136 @@
 .page-header {
   background-color: rgb(@basic_blue);
-  padding-bottom: 52px;
+  padding-bottom: 44px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 13px;
+    padding-bottom: 68px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    background-color: rgb(@blue_background_tablet);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
+  }
+
+  &--scroll {
+    padding-top: 6px;
+    background-color: rgb(@white);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    padding-bottom: 10px;
+    height: 73px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 13px;
+      height: 132px;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 90px;
+      z-index: 11;
+    }
+  }
 }
 
 .page-header__container {
   display: flex;
-  flex-direction: column;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 20px;
+  }
+}
+
+.page-header__toggle {
+  position: relative;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 25px;
+  height: 19px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  margin-right: 1px;
+  margin-left: auto;
+  cursor: pointer;
+  z-index: 6;
+
+  @media (min-width: @tablet-width) {
+    margin-right: auto;
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+
+  &--open {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 3px;
+      left: 0;
+      border-radius: 1.5px;
+      background-color: rgb(@white);
+
+      @media (min-width: @tablet-width) {
+        left: 1px;
+      }
+    }
+
+    &::before {
+      top: 3px;
+    }
+
+    &::after {
+      top: 11px;
+    }
+  }
+
+  &--close {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 23.8px;
+      height: 2px;
+      top: 7px;
+      left: 1px;
+      border-radius: 1.5px;
+      background-color: rgb(@gray_close);
+
+      @media (min-width: @tablet-width) {
+        width: 25px;
+        left: 0;
+        top: 6.5px;
+      }
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &--scroll {
+    &::before,
+    &::after {
+      background-color: rgb(@gray_close);
+    }
   }
 }

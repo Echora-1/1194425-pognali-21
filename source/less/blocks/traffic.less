@@ -1,4 +1,13 @@
 .traffic {
+  display: flex;
+  margin-top: 15px;
+  margin-left: 75px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 25px;
+    margin-left: 83px;
+  }
+
   &--catalog-item {
     @media (min-width: @tablet-width) {
       grid-column-start: 4;
@@ -14,5 +23,29 @@
       grid-row-end: 4;
       max-width: 140px;
     }
+  }
+}
+
+.traffic__item {
+  width: 21px;
+  height: 23px;
+  margin-right: 12px;
+  position: relative;
+
+  &--car {
+    margin-top: 2px;
+    margin-left: 1px;
+  }
+}
+
+.traffic__image {
+  fill: rgba(@dark_blue, 0.15);
+
+  &--active {
+    fill: rgb(@dark_blue);
+  }
+
+  &:hover + .tooltip--traffic {
+    display: inline-block;
   }
 }

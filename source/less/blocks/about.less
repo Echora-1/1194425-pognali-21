@@ -1,4 +1,38 @@
 .about {
-  padding-bottom: 82px;
+  border-radius: 0 0 30px 30px;
   background-color: rgb(@blue_background);
+  z-index: 9;
+
+  @media (min-width: @tablet-width) {
+    border-radius: 0 0 60px 60px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    background-color: rgb(@blue_background_tablet);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -60px;
+    border-radius: 0 0 56px 56px;
+  }
+}
+
+.about__container {
+  height: 353px;
+  padding-top: 31px;
+  padding-bottom: 83px;
+  background: url("../../img/about-mobile.png") no-repeat 20px center, url("../../img/back.svg") no-repeat 0 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-bottom: 22px;
+    height: 647px;
+    background: url("../../img/about_tablet.png") no-repeat 384px 11px, url("../../img/back_about_tablet.svg") no-repeat 40px 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 90px;
+    height: 810px;
+    background: url("../../img/about_desktop.png") no-repeat 750px 145px, url("../../img/back_about_desktop.svg") no-repeat 60px 130px;
+  }
 }
