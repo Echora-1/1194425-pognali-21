@@ -1,6 +1,7 @@
 .contacts {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 
 
   &--main-nav {
@@ -8,6 +9,7 @@
 
     @media (min-width: @tablet-width) {
       margin-bottom: 110px;
+      margin-left: -6px;
     }
 
     @media (min-width: @desktop-width) {
@@ -17,13 +19,14 @@
 
   &--feedback {
     @media (min-width: @tablet-width) {
-      margin-left: 35px;
+      margin-left: 43px;
     }
 
     @media (min-width: @desktop-width) {
       display: flex;
       flex-direction: row;
       min-width: 900px;
+      margin-left: 52px;
     }
   }
 }

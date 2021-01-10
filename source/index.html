@@ -73,7 +73,7 @@
         <h1 class="visually-hidden"> «Погнали» — лучший сайт для поиска попутчиков</h1>
         <section class="options">
             <div class="container options__container">
-                <h2 class="options__slogan">В путешествие с крутыми попутчиками!</h2>
+                <h2 class="options__slogan">В путешествие<br> с крутыми<br> попутчиками!</h2>
                 <div class="options__link-wrapper">
                     <a class="options__link options__link--call" href="tel:88005558628"><span class="visually-hidden">Позвонить нам</span></a>
                     <a class="options__link options__link--mail" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Написать нам</span></a>
@@ -83,22 +83,20 @@
                     <p class="description description--quote-options">«Лучшее приложение,<br>  что я видел в жизни!»</p>
                     <cite class="subtitle subtitle--quote-options">Мурат Эльтазин<br> главный редактор газеты «гаджетлайф»</cite>
                 </blockquote>
-            </div>
-            <div class="options__list-wrapper">
-                <ol class="options__list container">
-                    <li class="options__item options__item--number-1">
-                        Выберите<br> направление
-                    </li>
-                    <li class="options__item options__item--number-2">
-                        Изучите идеи<br> путешественников
-                    </li>
-                    <li class="options__item options__item--number-3">
-                        Находите тех,<br> кто похож на вас
-                    </li>
-                    <li class="options__item options__item--number-4">
-                        Путешествуйте<br> вместе!
-                    </li>
-                </ol>
+                <ol class="options__list">
+                  <li class="options__item options__item--number-1">
+                      Выберите<br> направление
+                  </li>
+                  <li class="options__item options__item--number-2">
+                      Изучите идеи<br> путешественников
+                  </li>
+                  <li class="options__item options__item--number-3">
+                      Находите тех,<br> кто похож на вас
+                  </li>
+                  <li class="options__item options__item--number-4">
+                      Путешествуйте<br> вместе!
+                  </li>
+              </ol>
             </div>
         </section>
         <section class="about">
@@ -156,7 +154,13 @@
                 </div>
                 <ul class="travelers__list">
                     <li class="travelers__item travelers__item--user-1">
-                        <div class="level level--travelers level--99"><span class="uppercase">99</span>level</div>
+                        <div class="level level--travelers level--99">
+                          <svg class="level__progress" width="60" height="60">
+                            <circle class="level__progress-circle" stroke="#FF8D30" stroke-width="4" cx="30" cy="30" r="28" fill="transparent"/>
+                          </svg>
+                          <span class="uppercase">99</span>
+                          level
+                        </div>
                         <img class="travelers__image" src="img/traveler-1.png" width="270" height="270" alt="Изображение пользователя">
                         <div class="travelers__description">
                             <div class="travelers__flags-wrapper travelers__flags-wrapper--user-1">
@@ -218,7 +222,13 @@
                         </div>
                     </li>
                     <li class="travelers__item travelers__item--user-2">
-                        <div class="level level--travelers level--80"><span class="uppercase">80</span>level</div>
+                        <div class="level level--travelers">
+                          <svg class="level__progress level__progress" width="60" height="60">
+                            <circle class="level__progress-circle level__progress-circle--user-2" stroke="#FF8D30" stroke-width="4" cx="30" cy="30" r="28" fill="transparent"/>
+                          </svg>
+                          <span class="uppercase">80</span>
+                          level
+                        </div>
                         <img class="travelers__image" src="img/traveler-2.png" width="270" height="270" alt="Изображение пользователя">
                         <div class="travelers__description">
                             <div class="travelers__flags-wrapper travelers__flag-wrapper--user-2">
@@ -282,7 +292,7 @@
             <div class="container tariffs__container">
                 <h2 class="visually-hidden">Наши тарифы</h2>
                 <p class="title title--tariffs">Добавьте свой профиль</p>
-                <ul class="tariffs__list">
+                <ol class="tariffs__list">
                     <li class="tariffs__item tariffs__item--number-1">
                         <a class="tariffs__link" href="">Базовое размещение<span class="tariffs__price">Бесплатно</span></a>
                     </li>
@@ -292,7 +302,7 @@
                     <li class="tariffs__item tariffs__item--number-3">
                         <a class="tariffs__link" href="">Кастомный цвет карточки<span class="tariffs__price">59 руб./мес</span></a>
                     </li>
-                </ul>
+                </ol>
                 <a class="tariffs__business" href="">Показать тарифы для бизнеса</a>
             </div>
         </section>
@@ -394,6 +404,30 @@
         </div>
     </div>
 </body>
+<script>
+  const circle = document.querySelector(".level__progress-circle");
+  const circleUser2 = document.querySelector(".level__progress-circle--user-2");
+  const radius = circle.r.baseVal.value;
+  const circumference = 2 * Math.PI * radius;
 
+  circle.style.strokeDasharray = `${circumference} ${circumference}`;
+  circle.style.strokeDashoffset = circumference;
+
+  circleUser2.style.strokeDasharray = `${circumference} ${circumference}`;
+  circleUser2.style.strokeDashoffset = circumference;
+
+  function setProgress(percent) {
+    const offset = circumference - percent / 100 * circumference;
+    circle.style.strokeDashoffset = offset;
+  }
+
+  function setProgressUser2(percent) {
+    const offset = circumference - percent / 100 * circumference;
+    circleUser2.style.strokeDashoffset = offset;
+  }
+
+  setProgress(99);
+  setProgressUser2(80);
+</script>
 
 </html>

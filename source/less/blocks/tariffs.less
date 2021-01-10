@@ -28,14 +28,14 @@
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width) {
-    background: url("../img/rates.png") no-repeat 583px 379px,
-      url("../img/back_tariffs.svg") no-repeat 530px 120px;
+    background: url("../img/rates.png") no-repeat 577px 379px,
+      url("../img/back_tariffs.svg") no-repeat 524px 120px;
   }
 
   @media (min-width: @desktop-width) {
     min-height: 690px;
     border-radius: 0 0 56px 56px;
-    background: url("../img/rates_tariffs_desktop.png") no-repeat 1109px 256px,
+    background: url("../img/rates_tariffs_desktop.png") no-repeat 1107px 256px,
       url("../img/back_tariffs_desktop.svg") no-repeat 750px 204px;
   }
 }
@@ -45,15 +45,16 @@
   margin-left: 25px;
   list-style: none;
   padding-left: 0;
+  counter-reset: number 0;
 
 
   @media (min-width: @tablet-width) {
-    margin-left: 53px;
+    margin-left: 61px;
   }
 
   @media (min-width: @desktop-width) {
     align-self: start;
-    margin-left: 162px;
+    margin-left: 160px;
   }
 }
 
@@ -62,20 +63,24 @@
   width: 200px;
   padding-bottom: 14px;
   border-bottom: 1px solid rgb(@border_footer_gray);
+  counter-increment: number;
+  margin-bottom: 12px;
 
   &::before {
-    content: "";
+    content: counter(number);
     width: 34px;
     height: 34px;
     border-radius: 20px;
     color: rgb(@white);
     font-size: 16px;
     line-height: 16px;
+    font-weight: 400;
     position: absolute;
     right: -45px;
     top: -9px;
     text-align: center;
     padding-top: 8px;
+    background-color: rgb(@special_orange);
 
     @media (min-width: @tablet-width) {
       width: 68px;
@@ -89,14 +94,19 @@
     }
   }
 
-
   @media (min-width: @tablet-width) {
     width: 562px;
     padding-bottom: 19px;
+    margin-bottom: 18px;
   }
 
   @media (min-width: @desktop-width) {
     width: 815px;
+    margin-bottom: 18px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
   &--number-1 {
@@ -108,10 +118,14 @@
       right: -44px;
       top: 3px;
       background-color: rgb(@special_orange);
-      content: "1";
 
       @media (min-width: @tablet-width) {
         top: -2px;
+      }
+
+      @media (min-width: @desktop-width) {
+        padding-top: 21px;
+        padding-right: 2px;
       }
     }
 
@@ -119,15 +133,17 @@
       padding-top: 18px;
       margin-bottom: 18px;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 18px;
+    }
   }
 
   &--number-2 {
     padding-bottom: 13px;
-    margin-bottom: 12px;
 
     &::before {
       background-color: rgb(@special_yellow_dark);
-      content: "2";
       top: -11px;
 
       @media (min-width: @tablet-width) {
@@ -137,14 +153,13 @@
 
     @media (min-width: @tablet-width) {
       padding-bottom: 19px;
-      margin-bottom: 18px;
     }
   }
 
   &--number-3 {
     &::before {
+      top: -9px;
       background-color: rgb(@basic_yellow);
-      content: "3";
 
       @media (min-width: @tablet-width) {
         top: -16px;
@@ -190,13 +205,14 @@
   margin-left: 25.5px;
   display: inline-block;
   text-align: center;
+  max-width: 500px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
     align-self: start;
     margin-top: 1px;
-    margin-left: 0;
+    margin-left: 8px;
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 90px;
@@ -206,7 +222,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 73px;
+    margin-left: 71px;
   }
 
   &:hover {

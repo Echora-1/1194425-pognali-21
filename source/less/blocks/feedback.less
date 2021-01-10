@@ -90,7 +90,7 @@
   @media (min-width: @tablet-width) {
     width: 536px;
     height: 80px;
-    margin-left: 36px;
+    margin-left: 44px;
     border-radius: 20px 0 0 20px;
     padding: 20px 31px;
     padding-top: 17px;
@@ -101,7 +101,7 @@
   @media (min-width: @desktop-width) {
     width: 850px;
     height: 81px;
-    margin-left: 3px;
+    margin-left: 11px;
   }
 
   &::-webkit-input-placeholder {
@@ -151,7 +151,7 @@
   outline: none;
   color: rgb(@basic_blue_light);
   width: 60px;
-  height: 62px;
+  min-height: 62px;
   border-radius: 10px;
   position: relative;
   cursor: pointer;
@@ -160,17 +160,17 @@
 
   @media (min-width: @tablet-width) {
     width: 80px;
-    height: 80px;
+    min-height: 80px;
     border-radius: 0 20px 20px 0;
     right: 36px;
   }
 
   @media (min-width: @desktop-width) {
-    right: 3px;
+    left: 5px;
     width: 324px;
-    height: 81px;
+    min-height: 81px;
     text-align: left;
-    padding-left: 35px;
+    padding: 10px 50px 10px 35px;
   }
 
   &:hover {
@@ -213,6 +213,6 @@
   display: none;
 
   @media (min-width: @desktop-width) {
-    display: inline;
+    display: inline-block;
   }
 }

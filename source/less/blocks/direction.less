@@ -7,20 +7,20 @@
   border-radius: 0 0 30px 30px;
 
   @media (min-width: @tablet-width) {
-    height: 1113px;
+    min-height: 1113px;
     border-radius: 0 0 60px 60px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 770px;
+    min-height: 770px;
     border-radius: 0 0 56px 56px;
   }
 }
 
 .direction__container {
   @media (min-width: @tablet-width) {
-    background:  url("../img/flag-back.svg") no-repeat 40px 337px,
-      url("../img/flags-back.png") no-repeat 440px 11px;
+    background:  url("../img/flag-back.svg") no-repeat 34px 337px,
+      url("../img/flags-back.png") no-repeat 434px 11px;
   }
 
   @media (min-width: @desktop-width) {
@@ -28,8 +28,8 @@
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
-    background:  url("../img/flag-back.svg") no-repeat 60.5px 20.5px,
-      url("../img/flags-back.png") no-repeat 1093.5px 19.5px;
+    background:  url("../img/flag-back.svg") no-repeat 57px 20px,
+      url("../img/flags-back.png") no-repeat 1090.5px 19px;
   }
 }
 
@@ -49,14 +49,15 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 30px;
-    margin-left: 35px;
+    margin-left: 43px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 1;
-    grid-row: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
     margin-top: 81px;
-    margin-left: 72px;
+    margin-left: 70px;
   }
 }
 
@@ -74,14 +75,14 @@
   align-items: start;
   justify-content: space-between;
   width: 270px;
-  height: 89px;
+  min-height: 89px;
   z-index: 1;
   margin-top: -11px;
   position: relative;
 
   @media (min-width: @tablet-width) {
     width: 618px;
-    height: 140px;
+    min-height: 140px;
     border-radius: 20px;
     margin-top: 11px;
     flex-direction: column;
@@ -108,7 +109,7 @@
 
     @media (min-width: @desktop-width) {
       margin-top: 10px;
-      background-position: 1px -1px;
+      background-position: 1px 0;
     }
   }
 

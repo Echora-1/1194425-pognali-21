@@ -4,6 +4,7 @@
   color: rgb(@special_orange);
   margin-top: 0;
   margin-left: 23px;
+  width: 210px;
 
   @media (min-width: @tablet-width) {
     font-size: 45px;
@@ -11,16 +12,23 @@
     margin-left: 33.5px;
   }
 
+  @media (min-width: @desktop-width) {
+    width: 482px;
+  }
+
   &--about {
+    margin-bottom: 0;
+
     @media (min-width: @tablet-width) {
-      margin-top: 71px;
-      margin-bottom: 42px;
+      margin-top: 39px;
+      margin-bottom: 26px;
+      margin-left: 42px;
     }
 
     @media (min-width: @desktop-width) {
-      margin-top: 98px;
-      margin-left: 72px;
-      margin-bottom: 59px;
+      margin-top: 87px;
+      margin-left: 70px;
+      margin-bottom: 60px;
     }
   }
 
@@ -31,12 +39,13 @@
 
     @media (min-width: @tablet-width) {
       margin-bottom: 58px;
+      margin-left: 41px;
     }
 
     @media (min-width: @desktop-width) {
-      margin-top: -23px;
+      margin-top: 90px;
       margin-bottom: 59px;
-      margin-left: 141px;
+      margin-left: 149px;
     }
   }
 
@@ -44,14 +53,14 @@
     margin-left: 24px;
 
     @media (min-width: @tablet-width) {
-      margin-left: 33px;
+      margin-left: 41px;
       margin-top: 71px;
       margin-bottom: 58px;
     }
 
     @media (min-width: @desktop-width) {
       margin-top: 60px;
-      margin-left: 71px;
+      margin-left: 69px;
       margin-bottom: 57px;
     }
   }
@@ -61,16 +70,15 @@
     width: 107px;
 
     @media (min-width: @tablet-width) {
-      text-align: center;
       margin-top: 19px;
-      margin-left: 0;
+      margin-left: 24px;
       width: 500px;
       margin-bottom: 32px;
     }
 
     @media (min-width: @desktop-width) {
       margin-top: 52px;
-      margin-left: 4px;
+      margin-left: 36px;
       margin-bottom: 92px;
     }
   }
@@ -80,13 +88,13 @@
 
     @media (min-width: @tablet-width) {
       margin-top: 29px;
-      margin-left: 146px;
+      margin-left: 155px;
       margin-bottom: 40px;
     }
 
     @media (min-width: @desktop-width) {
       margin-top: 62px;
-      margin-left: 16px;
+      margin-left: 120px;
       margin-bottom: 20px;
     }
   }
@@ -94,15 +102,18 @@
   &--popup {
     margin-left: 23px;
     margin-right: 24px;
-    margin-top: 0;
+    margin-top: -2px;
     margin-bottom: 29px;
+    text-align: center;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 50px;
       margin-left: auto;
       align-self: start;
       margin-right: auto;
-      padding-left: 1px;
+      min-width: 320px;
+      padding-top: 2px;
+      padding-left: 4px;
+      margin-bottom: 50px;
     }
 
     @media (min-width: @desktop-width) {

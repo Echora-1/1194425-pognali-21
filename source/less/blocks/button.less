@@ -9,27 +9,28 @@
   border-radius: 10px;
   position: relative;
   width: 270px;
-  height: 62px;
+  min-height: 62px;
   margin-top: 11px;
   padding-top: 21px;
+  padding-right: 32px;
+  padding-bottom: 15px;
   padding-left: 24px;
 
   @media (min-width: @tablet-width) {
     margin-top: 0;
     font-size: 24px;
     line-height: 24px;
-    padding-top: 27px;
     width: 276px;
-    height: 80px;
-    padding-left: 32px;
+    min-height: 80px;
     border-radius: 20px;
     margin-left: 35px;
+    padding: 27px 44px 20px 32px;
   }
 
   &::after {
     position: absolute;
     content: "";
-    width: 13px;
+    width: 14px;
     height: 14px;
     background-image: url("../img/button-arrow.svg");
     background-repeat: no-repeat;
@@ -38,8 +39,8 @@
     top: 24px;
 
     @media (min-width: @tablet-width) {
-      right: 33px;
-      top: 32.5px;
+      right: 34px;
+      top: 33px;
     }
   }
 
@@ -62,9 +63,10 @@
 
     @media (min-width: @tablet-width) {
       width: 618px;
-      height: 80px;
+      min-height: 80px;
       padding-top: 24px;
       padding-left: 34px;
+      margin-left: 43px;
     }
 
     @media (min-width: @desktop-width) {
@@ -89,6 +91,10 @@
     &:hover {
       color: rgb(@white);
       background-color: rgb(@blue_background);
+
+      &::after {
+        background-image: url("../img/button_arrow_white.svg");
+      }
     }
 
     &:active {
@@ -101,21 +107,35 @@
 
     @media (min-width: @tablet-width) {
       margin-top: 54px;
-      margin-left: 34px;
+      margin-left: 42px;
+      margin-bottom: 9px;
       display: inline-block;
     }
 
     @media (min-width: @desktop-width) {
+      margin-bottom: 0;
       margin-top: 86px;
-      margin-left: 73px;
+      margin-left: 71px;
       width: 274px;
+
+      &::after {
+        right: 33px;
+      }
     }
   }
 
   &--direction-all {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    &::after {
+      right: 21px;
+      top: 25px;
+    }
+
     @media (min-width: @tablet-width) {
       margin-top: 30px;
-      margin-left: 35px;
+      margin-left: 43px;
       padding-top: 29px;
       padding-left: 32px;
       height: 82px;
@@ -123,7 +143,7 @@
 
       &::after {
         right: 30px;
-        top: 35.5px;
+        top: 36px;
       }
     }
 
@@ -131,12 +151,12 @@
       max-width: 275px;
       max-height: 80px;
       grid-column: 2;
-      margin-top: -85px;
-      margin-left: 143px;
+      margin-left: 151px;
       padding-top: 27px;
+      margin-top: 27px;
 
       &::after {
-        right: 34px;
+        right: 33px;
         top: 33px;
       }
     }
@@ -144,23 +164,34 @@
 
   &--travelers-all {
     margin-top: 4px;
-    height: 61px;
+    min-height: 61px;
+
+    &::after {
+      right: 21px;
+      top: 25px;
+    }
 
     @media (min-width: @tablet-width) {
       width: 616px;
       height: 80px;
       margin-top: 56px;
-      margin-left: 34px;
+      margin-left: 42px;
       padding-top: 26px;
       padding-left: 31px;
+
+      &::after {
+        right: 33px;
+        top: 33px;
+      }
     }
 
     @media (min-width: @desktop-width) {
       width: 280px;
       max-height: 80px;
-      margin-top: -133px;
-      margin-left: 73px;
+      margin-top: -6px;
+      margin-left: 71px;
       padding-left: 32px;
+
 
       &::after {
         right: 34px;

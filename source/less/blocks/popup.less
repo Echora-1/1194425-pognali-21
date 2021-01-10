@@ -1,15 +1,22 @@
 .popup {
   left: 50%;
   bottom: 50%;
-  transform: translate(-50%, 52%);
-  z-index: 11;
+  transform: translate(-50%, 50%);
+  z-index: 13;
   position: fixed;
   display: none;
+
+  @media (min-width: @tablet-width) {
+    left: 49.5%;
+    transform: translate(-49%, 50%);
+  }
 
   @media (min-width: @desktop-width) {
     display: none;
     justify-content: center;
     padding-left: 94px;
+    transform: translate(-50%, 50%);
+    left: 50.5%;
   }
 }
 
@@ -87,10 +94,10 @@
   }
 
   &:last-child {
-    margin-bottom: 34px;
+    margin-bottom: 35px;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 50px;
+      margin-bottom: 52px;
     }
 
     @media (min-width: @desktop-width) {
@@ -103,20 +110,23 @@
 .popup__button-wrapper {
   background-color: rgb(@gray_business);
   width: 270px;
-  height: 59px;
+  min-height: 59px;
   border-radius: 0 0 20px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 15px;
 
   @media (min-width: @tablet-width) {
-    width: 688px;
-    height: 108px;
+    width: 686px;
+    min-height: 108px;
+    margin-right: -3px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 750px;
+    width: 748px;
     border-radius: 0 0 30px 30px;
+    margin-right: -2px;
   }
 
   &:hover {
@@ -134,17 +144,18 @@
   text-transform: uppercase;
   border: none;
   outline: none;
-  margin-top: 8px;
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
+  padding-top: 3px;
 
   @media (min-width: @tablet-width) {
     font-size: 24px;
     line-height: 24px;
     text-transform: none;
+    padding-top: 0;
     margin-top: 0;
-    margin-bottom: 3px;
+    margin-bottom: 6px;
   }
 
   &:active {
@@ -159,7 +170,13 @@
 }
 
 .popup__price {
+  max-width: 250px;
+
   @media (min-width: @tablet-width) {
     margin-left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: -2px;
   }
 }
