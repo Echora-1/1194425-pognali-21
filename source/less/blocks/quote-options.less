@@ -1,15 +1,31 @@
 .quote-options {
   background-color: rgb(@basic_blue);
   position: relative;
-  z-index: 1;
   margin: 0;
   margin-bottom: 25px;
-  padding: 0 40px;
-  width: 100%;
+  padding: 31px 40px;
+  padding-bottom: 50px;
+  width: 320px;
+  min-height: 248px;
+  top: -20px;
   left: -25px;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+    align-self: flex-start;
+    position: static;
+    padding-bottom: 100px;
+    padding-left: 33px;
+  }
 
   @media (min-width: @desktop-width) {
     width: 264px;
-    align-self: flex-end;
+    align-self: flex-start;
+    margin-top: 49px;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: -16px;
   }
 }
