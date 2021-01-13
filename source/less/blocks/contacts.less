@@ -9,7 +9,7 @@
 
     @media (min-width: @tablet-width) {
       margin-bottom: 110px;
-      margin-left: -10px;
+      margin-left: 0;
     }
 
     @media (min-width: @desktop-width) {
@@ -19,7 +19,7 @@
 
   &--feedback {
     @media (min-width: @tablet-width) {
-      margin-left: 39px;
+      margin-left: 35px;
     }
 
     @media (min-width: @desktop-width) {
@@ -103,11 +103,17 @@
     }
 
     &:last-child {
+      @media (min-width: @tablet-width) {
+        &::before {
+          top: -20px;
+        }
+      }
+
       @media (min-width: @desktop-width) {
         margin-right: 0;
 
         &::before {
-          top: -31px;
+          top: -32px;
           left: -123px;
         }
       }
@@ -180,7 +186,7 @@
     top: 3px;
 
     @media (min-width: @tablet-width) {
-      top: 6px;
+      top: 5px;
       left: -71px;
       width: 28.5px;
       height: 19px;

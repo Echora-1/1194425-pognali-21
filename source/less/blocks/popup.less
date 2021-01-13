@@ -6,17 +6,11 @@
   position: fixed;
   display: none;
 
-  @media (min-width: @tablet-width) {
-    left: 49.5%;
-    transform: translate(-49%, 50%);
-  }
-
   @media (min-width: @desktop-width) {
     display: none;
     justify-content: center;
-    padding-left: 94px;
     transform: translate(-50%, 50%);
-    left: 50.5%;
+    left: 52%;
   }
 }
 
@@ -49,6 +43,7 @@
 .popup__list {
   display: flex;
   flex-direction: column;
+  margin-top: 2px;
 }
 
 .popup__item {
@@ -63,8 +58,8 @@
 
   @media (min-width: @tablet-width) {
     width: 506px;
-    padding-bottom: 13.5px;
-    margin-bottom: 13px;
+    padding-bottom: 13px;
+    margin-bottom: 14px;
     font-size: 22px;
     line-height: 28px;
     display: flex;
@@ -75,14 +70,17 @@
     width: 630px;
     padding-bottom: 15px;
     margin-bottom: 12px;
+    margin-left: -4px;
   }
 
   &:first-child {
-    padding-top: 10px;
+    padding-top: 8px;
     border-top: 1px solid rgb(@border_copyright);
 
     @media (min-width: @tablet-width) {
-      padding-top: 12px;
+      padding-top: 13px;
+      padding-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     @media (min-width: @desktop-width) {
@@ -97,7 +95,8 @@
     margin-bottom: 35px;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 52px;
+      padding-bottom: 10px;
+      margin-bottom: 53px;
     }
 
     @media (min-width: @desktop-width) {
@@ -118,15 +117,15 @@
   padding: 15px;
 
   @media (min-width: @tablet-width) {
-    width: 686px;
+    width: 688px;
     min-height: 108px;
-    margin-right: -3px;
+    margin-right: -2px;
   }
 
   @media (min-width: @desktop-width) {
     width: 748px;
     border-radius: 0 0 30px 30px;
-    margin-right: -2px;
+    margin-right: -1px;
   }
 
   &:hover {
@@ -153,9 +152,13 @@
     font-size: 24px;
     line-height: 24px;
     text-transform: none;
-    padding-top: 0;
+    padding-top: 1px;
     margin-top: 0;
     margin-bottom: 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 2px;
   }
 
   &:active {

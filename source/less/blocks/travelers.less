@@ -30,18 +30,18 @@
   }
 
   @media (min-width: @tablet-width) {
-    background: url("../img/smolov-back-desktop.png") no-repeat 30px 428px,
-      url("../img/rogovaya-back-desktop.png") no-repeat 399px 82px,
-      url("../img/back_travelers_desktop.svg") no-repeat 30px 73px;
+    background: url("../img/smolov-back-desktop.png") no-repeat 40px 428px,
+      url("../img/rogovaya-back-desktop.png") no-repeat 409px 82px,
+      url("../img/back_travelers_desktop.svg") no-repeat 40px 73px;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
-    background: url("../img/smolov-back-desktop.png") no-repeat 545px 136px,
-      url("../img/rogovaya-back-desktop.png") no-repeat 188px 388px,
-      url("../img/back_travelers_desktop.svg") no-repeat 58px 72px;
+    background: url("../img/smolov-back-desktop.png") no-repeat 547px 136px,
+      url("../img/rogovaya-back-desktop.png") no-repeat 190px 388px,
+      url("../img/back_travelers_desktop.svg") no-repeat 60px 72px;
     min-height: 700px;
   }
 }
@@ -60,11 +60,10 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    margin-left: 4px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: -16px;
+    margin-right: -17px;
     margin-left: 8px;
     grid-row-start: 1;
     grid-row-end: 3;
@@ -76,6 +75,7 @@
   position: relative;
   margin-bottom: 9px;
   border-radius: 10px;
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     margin-top: 5px;
@@ -104,6 +104,10 @@
   &:hover {
     box-shadow: 0 4px 9px rgba(@white, 0.16);
   }
+
+  &:hover .travelers__image {
+    transform: scale(1.005);
+  }
 }
 
 .travelers__image {
@@ -113,10 +117,6 @@
     width: 285px;
     height: 285px;
     border-radius: 20px 20px 0 0;
-  }
-
-  &:hover {
-    transform: scale(1.005);
   }
 }
 
@@ -220,7 +220,7 @@
     @media (min-width: @tablet-width) {
       width: 8px;
       height: 8px;
-      top: 12px;
+      top: 40%;
       left: -21px;
       border-radius: 4px;
     }
@@ -249,7 +249,7 @@
   }
 
   &--user-2 {
-    margin-left: 39px;
+    margin-left: 38px;
 
     @media (min-width: @tablet-width) {
       margin-left: 21px;

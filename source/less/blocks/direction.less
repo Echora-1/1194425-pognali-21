@@ -19,8 +19,8 @@
 
 .direction__container {
   @media (min-width: @tablet-width) {
-    background:  url("../img/flag-back.svg") no-repeat 30px 337px,
-      url("../img/flags-back.png") no-repeat 430px 11px;
+    background:  url("../img/flag-back.svg") no-repeat 40px 337px,
+      url("../img/flags-back.png") no-repeat 440px 11px;
   }
 
   @media (min-width: @desktop-width) {
@@ -28,15 +28,14 @@
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
-    background:  url("../img/flag-back.svg") no-repeat 57px 20px,
-      url("../img/flags-back.png") no-repeat 1090.5px 19px;
+    background:  url("../img/flag-back.svg") no-repeat 59px 20px,
+      url("../img/flags-back.png") no-repeat 1093px 19px;
   }
 }
 
 
 .direction__wrapper {
   @media (min-width: @desktop-width) {
-    max-width: 360px;
     grid-column: 2;
     align-self: center;
   }
@@ -49,7 +48,7 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 30px;
-    margin-left: 39px;
+    margin-left: 35px;
   }
 
   @media (min-width: @desktop-width) {
@@ -131,12 +130,27 @@
   left: 25px;
 
   @media (min-width: @tablet-width) {
-    top: 28px;
-    left: 410px;
+    top: 17px;
+    left: 398px;
+    width: 70px;
+    height: 47px;
+    border-radius: 5px;
   }
 
   @media (min-width: @desktop-width) {
-    top: 35px;
-    left: 355px;
+    top: 23px;
+    left: 338px;
+  }
+
+  &--czech {
+    @media (min-width: @tablet-width) {
+      top: 16px;
+      left: 397px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 24px;
+      left: 338px;
+    }
   }
 }
