@@ -2,16 +2,69 @@
   padding-top: 28px;
   padding-bottom: 30px;
   background-color: rgb(@special_blue_light);
+  z-index: 3;
+  border-radius: 30px 30px 0 0;
+  margin-top: -44px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -64px;
+    padding-top: 56px;
+    min-height: 574px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 52px;
+    margin-top: -297px;
+    border-radius: 56px 56px 0 0;
+    min-height: 495px;
+  }
 }
 
 .plans__list {
   list-style: none;
   padding-left: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 53px;
+  }
 }
 
 .plans__item {
   background-color: rgb(@white);
+  min-height: 154px;
+  width: 270px;
+  padding: 21px 23px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  counter-increment: number;
 
+  &::before {
+    position: absolute;
+    content: counter(number);
+    font-weight: 500;
+    top: 22px;
+    left: 24px;
+
+    @media (min-width: @tablet-width) {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      top: 41px;
+      left: 570px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 42px;
+      top: 37px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -19,16 +72,71 @@
     justify-content: space-between;
     text-align: center;
     min-width: 618px;
+    min-height: 152px;
+    padding: 14px 40px;
+    margin-left: 35px;
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1258px;
+    min-height: 97px;
+    margin-bottom: 15px;
+    margin-left: 0;
+    position: relative;
+    left: 64px;
+  }
+
+  &:last-child {
+    @media (min-width: @desktop-width) {
+      min-height: 98px;
+    }
   }
 }
 
 .plans__direction {
+  margin-top: 1px;
+  margin-bottom: 6px;
+  padding-left: 20px;
   line-height: 16px;
   color: rgb(@basic_blue_light);
 
   @media (min-width: @tablet-width) {
     text-align: left;
-    min-width: 500px;
+    max-width: 500px;
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 24px;
+    padding-bottom: 30px;
+    padding-left: 0;
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 54px;
+    padding-bottom: 0;
+    margin-top: 3px;
+    width: 340px;
+    align-self: center;
+  }
+
+  &::before {
+    content: "";
+    width: 618px;
+    height: 1px;
+    background-color: rgba(@hobbies_border_grey, 0.3);
+    position: absolute;
+    bottom: -3px;
+    left: -40px;
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
   }
 }
 
@@ -46,6 +154,64 @@
     flex-direction: row;
     justify-content: space-between;
     min-width: 354px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 361px;
+    margin-left: 70px;
+  }
+
+  &--number-2 {
+    @media (min-width: @desktop-width) {
+      margin-left: 70px;
+    }
+  }
+}
+
+.plans__travelers {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+
+  @media (min-width: @tablet-width) {
+    letter-spacing: 0.1em;
+    margin-bottom: 2px;
+    margin-left: 0;
+    align-self: flex-end;
+    max-width: 170px;
+    margin-right: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 16px;
+    align-self: center;
+    margin-right: 20px;
+  }
+}
+
+.plans__date {
+  margin-top: 0;
+  margin-left: 2px;
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+    margin-left: 0;
+    align-self: flex-end;
+    max-width: 170px;
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 16px;
+    margin-left: 20px;
+    margin-right: 7px;
+    align-self: center;
+    max-width: 180px;
   }
 }
 
@@ -57,7 +223,26 @@
   text-transform: uppercase;
   text-decoration: none;
   color: rgba(@black, 0.3);
-  max-height: 20px;
+  min-height: 20px;
+  margin-left: 2px;
+
+  @media (min-width: @tablet-width) {
+    letter-spacing: 0.1em;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 2px;
+    align-self: flex-end;
+    max-width: 170px;
+    margin-top: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    letter-spacing: 0.08em;
+    margin-bottom: 18px;
+    margin-right: 4px;
+    margin-left: 0;
+    align-self: center;
+  }
 
   &:hover {
     color: rgba(@black, 0.6);

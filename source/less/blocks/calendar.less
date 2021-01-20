@@ -1,8 +1,107 @@
-.calendar__last-month,
-.calendar__next-month {
+.calendar__month {
+  margin-bottom: 20px;
+  display: flex;
+  height: 44px;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  border-top: 1px solid rgb(@calendary_gray);
+  border-bottom: 1px solid rgb(@calendary_gray);
+
+  @media (min-width: @tablet-width) {
+    height: 87px;
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 16px;
+  }
+}
+
+.calendar__month-button {
   background-color: transparent;
   border: none;
   outline: none;
+  position: absolute;
+  width: 15px;
+  height: 21px;
+  z-index: 2;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 21px;
+    height: 38px;
+  }
+
+
+  &--last {
+    left: -2px;
+
+    @media (min-width: @tablet-width) {
+      left: 16px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 1px;
+    }
+  }
+
+  &--next {
+    right: -2px;
+
+    @media (min-width: @tablet-width) {
+      right: 16px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 1px;
+    }
+  }
+
+  &:hover + .calendar__month-icon {
+    fill: rgba(@black, 0.5);
+  }
+
+  &:active + .calendar__month-icon {
+    fill: rgba(@black, 0.1);
+  }
+}
+
+.calendar__month-icon {
+  position: absolute;
+  fill: rgba(@black, 0.3);
+  left: -2px;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    top: 24px;
+    left: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 34px;
+    height: 34px;
+    top: 28px;
+    left: -7px;
+  }
+
+  &--next {
+    transform: rotate(180deg);
+    left: auto;
+    top: 10px;
+    right: -2px;
+
+    @media (min-width: @tablet-width) {
+      top: 22px;
+      right: 6px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 26px;
+      right: -6px;
+    }
+  }
 }
 
 .calendar__selection-month {
@@ -14,40 +113,152 @@
   font-size: 20px;
   line-height: 20px;
   color: rgb(@basic_blue_light);
+  width: 140px;
+  text-align: center;
+  padding-bottom: 4px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    width: 240px;
+    padding-left: 0;
+    padding-right: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .calendar__wrapper {
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  border-collapse: collapse;
+  margin-bottom: 22px;
+  width: 221px;
+  margin-left: 1px;
+
+  @media (min-width: @tablet-width) {
+    width: 538px;
+    font-size: 18px;
+    line-height: 18px;
+    margin-left: 0;
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1000px;
+    margin-left: 1px;
+  }
 }
 
 .calendar__name {
   font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 18px;
+    text-align: left;
+    padding-left: 17px;
+    padding-bottom: 20px;
+  }
 
   &--weekend {
     color: rgb(@red_weekend);
   }
 }
 
+.calendar__name-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+    text-transform: none;
+  }
+}
+
 .calendar__day {
   color: rgb(@basic_blue_light);
   background-color: rgb(@light_gray);
-  border: 2px solid rgb(@light_gray);
+  border: 1px solid rgb(@calendary_gray);
+  table-layout: fixed;
+  width: 32px;
+  height: 31px;
+  text-align: center;
+  cursor: pointer;
+
+  &:last-child {
+    @media (min-width: @tablet-width) {
+      width: 76px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 78px;
+    height: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    vertical-align: top;
+    padding-top: 13px;
+    padding-left: 16px;
+    width: 76px;
+    height: 71px;
+    color: rgb(@special_grey);
+  }
 
   &--disabled {
     color: rgba(@special_grey, 0.3);
     background-color: rgb(@white);
-    border: 2px solid rgb(@white);
+
+    @media (min-width: @tablet-width) {
+      font-size: 18px;
+      line-height: 18px;
+    }
   }
 
   &--chosen {
     color: rgb(@white);
     background-color: rgb(@basic_blue_light);
-    border: 2px solid rgb(@basic_blue_light);
   }
 
   &:hover {
-    border: 2px solid rgb(@red_weekend);
+    outline: 2px solid rgb(@red_weekend);
+    outline-offset: -2px;
+
+    @media (min-width: @tablet-width) {
+      outline: 4px solid rgb(@red_weekend);
+      outline-offset: -4px;
+    }
+  }
+
+  &--month {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: inline;
+      margin-left: 5px;
+    }
+  }
+
+  &--reservation {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+      margin-top: 7px;
+    }
   }
 }

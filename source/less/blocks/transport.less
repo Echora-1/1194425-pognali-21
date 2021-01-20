@@ -1,6 +1,18 @@
 .transport {
   border: 1px solid rgb(@hobbies_border_grey);
   border-radius: 10px;
+  text-align: center;
+  vertical-align: top;
+  padding: 18px 15px 5px 15px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 18.5px;
+    padding-bottom: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 20px;
+  }
 
   &:hover {
     border: 1px solid rgb(@hobbies_border_hover);
@@ -11,10 +23,133 @@
   font-weight: bold;
   text-transform: uppercase;
   color: rgb(@basic_blue_light);
+  position: absolute;
+  background-color: rgb(@light_gray);
+  display: block;
+  text-align: center;
+  width: 110px;
+  top: -9px;
+  bottom: auto;
+  left: 79px;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    bottom: -9px;
+    top: auto;
+    left: 78px;
+    width: 152px;
+  }
+
+  @media (min-width: @desktop-width) {
+    letter-spacing: 0.09em;
+    width: 154px;
+    left: 114px;
+    bottom: -9.5px;
+  }
+}
+
+.transport__item {
+  position: relative;
+  display: inline-block;
+  top: -3px;
+  left: 1px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    top: 5px;
+    left: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 1.5px;
+    left: 4px;
+  }
+
+  &:hover .transport__name {
+    box-shadow: 0 2px 6px rgba(@basic_blue, 0.17);
+  }
+
+  &:active .transport__name {
+    background-color: rgb(@filter_background);
+  }
+
+  &:hover .transport__icon {
+    fill: rgb(@transport_hover_grey);
+  }
+
+  &:active .transport__icon {
+    fill: rgba(@basic_blue_light, 0.1);
+  }
+}
+
+.transport__name {
+  display: block;
+  width: 31px;
+  height: 31px;
+  border-radius: 17px;
+  background-color: rgb(@white);
+  margin-left: -4px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 43px;
+    height: 43px;
+    border-radius: 25px;
+    margin-left: -5px;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 45px;
+  }
+
+  &:hover .transport__marker:checked + .transport__icon {
+    fill: rgba(@basic_blue_light, 0.7);
+  }
+
+  &:active .transport__marker:checked + .transport__icon {
+    fill: rgba(@basic_blue_light, 0.3);
+  }
+
+  &:hover + .tooltip {
+    display: block;
+  }
 }
 
 .transport__marker {
   position: absolute;
   z-index: -1;
   opacity: 0;
+  top: 25%;
+  left: 25%;
+  margin: 0;
+
+  &:checked + .transport__icon {
+    fill: rgb(@basic_blue_light);
+  }
+}
+
+.transport__icon {
+  position: absolute;
+  fill: rgb(@transport_grey);
+  left: 3px;
+  top: 8px;
+
+  @media (min-width: @tablet-width) {
+    width: 23px;
+    height: 22px;
+    top: 11px;
+    left: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 23px;
+    height: 23px;
+    top: 12px;
+    left: 5.5px;
+  }
 }

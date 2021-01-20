@@ -4,14 +4,103 @@
   line-height: 18px;
   text-transform: uppercase;
   color: rgb(@basic_blue_light);
+  border-collapse: collapse;
+  width: 220px;
+  height: 204px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 35px;
+    margin-bottom: 28px;
+    margin-left: 27px;
+    width: 262px;
+    height: 346px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-collapse: separate;
+    width: 390px;
+    height: 408px;
+    border-spacing: 14px;
+    margin-top: 20px;
+    margin-left: 12px;
+    margin-bottom: 14px;
+  }
+}
+
+.alphabet__row {
+  @media (max-width: @tablet-width - 1px) {
+    &:first-child .alphabet__item {
+      height: 40px;
+    }
+  }
 }
 
 .alphabet__item {
+  width: 43px;
+  height: 41px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid rgb(@hobbies_border_grey);
+  border-top: none;
+  padding-top: 2px;
+  padding-right: 2px;
+
+  @media (min-width: @tablet-width) {
+    width: 52px;
+    height: 69px;
+    border: 1px solid rgb(@hobbies_border_grey);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 60px;
+    height: 70px;
+    border: 1px solid rgb(@hobbies_border_grey);
+    border-radius: 4px;
+    padding-top: 3px;
+    padding-left: 2px;
+  }
+
   &:hover {
     background-color: rgb(@light_gray);
+    border-bottom: 1px solid rgb(@light_gray);
+
+    @media (min-width: @tablet-width) {
+      color: rgb(@white);
+      background-color: rgb(@basic_blue_light);
+      border: 1px solid rgb(@basic_blue_light);
+    }
+
+    @media (min-width: @desktop-width) {
+      color: rgb(@basic_blue_light);
+      background-color: rgb(@white);
+      border: 1px solid rgb(@step_border_hover);
+    }
+  }
+
+  &:active {
+    @media (min-width: @desktop-width) {
+      color: rgb(@white);
+      background-color: rgb(@basic_blue_light);
+      border: 1px solid rgb(@basic_blue_light);
+    }
   }
 
   &--active {
     background-color: rgb(@light_gray);
+    border-bottom: 1px solid rgb(@light_gray);
+
+    @media (min-width: @tablet-width) {
+      color: rgb(@white);
+      background-color: rgb(@basic_blue_light);
+      border: 1px solid rgb(@basic_blue_light);
+    }
+
+    @media (min-width: @desktop-width) {
+      color: rgb(@white);
+      background-color: rgb(@basic_blue_light);
+      border: 1px solid rgb(@basic_blue_light);
+    }
   }
 }

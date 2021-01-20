@@ -35,6 +35,20 @@
       z-index: 11;
     }
   }
+
+  &--form {
+    padding-top: 1px;
+    padding-bottom: 26px;
+    background-color: rgb(@blue_background_tablet);
+
+    @media (min-width: @tablet-width) {
+      padding-top: 13px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-color: rgb(@blue_background);
+    }
+  }
 }
 
 .page-header__container {
@@ -140,6 +154,15 @@
     &::before,
     &::after {
       background-color: rgb(@gray_close);
+    }
+  }
+
+  &--form {
+    margin-right: 0;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 128px;
+      margin-left: 128px;
     }
   }
 }
