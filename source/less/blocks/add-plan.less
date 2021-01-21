@@ -2,4 +2,25 @@
   padding-top: 20px;
   padding-bottom: 43px;
   background-color: rgb(@add_plan_background);
+  z-index: 4;
+  margin-top: -16px;
+  border-radius: 30px 30px 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -42px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -82px;
+    border-radius: 56px 56px 0 0;
+  }
+}
+
+.add-plan__container {
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    padding: 0 50px;
+  }
 }

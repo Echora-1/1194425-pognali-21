@@ -11,5 +11,23 @@
     font-size: 38px;
     line-height: 38px;
     color: rgb(@basic_blue);
+    border-bottom: 1px solid rgba(@special_grey, 0.3);
+    width: 51px;
+    padding-bottom: 2px;
+    margin-bottom: 6px;
+
+    @media (min-width: @tablet-width) {
+      width: 48px;
+      padding-bottom: 0;
+      margin-bottom: 5px;
+    }
+
+    @media (min-width: @desktop-width) {
+      color: rgb(@white);
+      border-bottom: 2px solid rgba(@white, 0.3);
+      width: 50px;
+      padding-right: 4px;
+      margin-bottom: 4px;
+    }
   }
 }

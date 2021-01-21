@@ -4,14 +4,63 @@
 }
 
 .page-main__header {
-  background-color: rgb(@basic_blue);
-  padding-bottom: 10px;
+  z-index: 9;
+  background-color: rgb(@blue_background_tablet);
+  margin-top: -1px;
+  border-radius: 0 0 20px 20px;
+  min-height: 70px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 234px;
+    border-radius: 0 0 60px 60px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: rgb(@blue_background);
+    min-height: 222px;
+    border-radius: 0 0 56px 56px;
+    padding-bottom: 0;
+  }
 }
 
 .page-main__container {
+  display: flex;
+  min-height: 70px;
+  position: relative;
+
   @media (min-width: @tablet-width) {
-    display: flex;
     justify-content: space-between;
+    min-height: 235px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 221px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 214px;
+    height: 5px;
+    border-radius: 4px;
+    background-color: rgb(@special_orange);
+    top: auto;
+    bottom: 0;
+    margin-bottom: -2px;
+    left: 25px;
+
+    @media (min-width: @tablet-width) {
+      left: 75px;
+      margin-bottom: -4px;
+      width: 358px;
+      height: 8px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 126px;
+      margin-bottom: -5px;
+    }
   }
 }
 
@@ -19,7 +68,25 @@
   color: rgb(@white);
   font-size: 36px;
   line-height: 36px;
-  margin-top: 0;
+  margin-bottom: 15px;
+  margin-top: auto;
+  max-width: 220px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: auto;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 69px;
+    margin-left: 35px;
+    max-width: 550px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 46px;
+    padding-bottom: 25px;
+    margin-left: 64px;
+    max-width: 750px;
+  }
 }
 
 .page-main__link {
@@ -40,5 +107,16 @@
 
   &:active {
     opacity: 30%;
+  }
+}
+
+.page-main__decor {
+  height: 40px;
+  background-color: rgb(@basic_yellow);
+  z-index: -8;
+  margin-top: -16px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
